@@ -1,2 +1,2 @@
-# ReLucky
-Advertising crazy people stablished in Guadalajara, Mexico
+# Lucky Ideas Co.
+Crazy advertisers crew first gathered in Guadalajara, Mexico.
