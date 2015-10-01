@@ -1,0 +1,858 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   INIT LUCKY COLOR PALETTE
+========================================================================== */
+    .BLUE_NAVY{ color: #0c1f28; }
+    .BLUE_NAVY_SHADOW{color: #00131d; }
+    .RED{ color: #e8545e; }
+    .GRAY{ color: #ecf1f9; }
+    .WHITE{ color: #edf1fa; }
+/* ==========================================================================
+   END LUCKY COLOR PALETTE
+========================================================================== */
+
+
+/* ==========================================================================
+   NDRW's custom styles
+   ========================================================================== */
+html{
+    font-family: 'Sniglet', cursive;
+}
+
+body{
+    background-color: #0c1f28;
+}
+
+
+/*////////////////////////////// WRAPPERS STYLING //////////////////////////////*/
+
+    #windowWrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        min-height: 600px;
+    }
+
+    #currentWindow{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .currentPage{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        display: none;
+         -webkit-transition: all .8s ease-in-out;
+           -moz-transition: all .8s ease-in-out;
+            -ms-transition: all .8s ease-in-out;
+             -o-transition: all .8s ease-in-out;
+                transition: all .8s ease-in-out;
+    }
+
+    .waitingPage{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /*bottom: 100%;*/
+
+        -webkit-transition: all .8s ease-in-out;
+           -moz-transition: all .8s ease-in-out;
+            -ms-transition: all .8s ease-in-out;
+             -o-transition: all .8s ease-in-out;
+                transition: all .8s ease-in-out;
+    }
+/*////////////////////////////// END WRAPPERS STYLING //////////////////////////////*/
+
+/*////////////////////////////// BACKGROUND ANIMATIONS //////////////////////////////*/
+
+    .bgsWrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .bgsWrapper div{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    #lucky-bg-1 div{
+        background-image: url('../img/bg/lucky-stars.png');
+        background-repeat: repeat;
+        opacity: 0.5;
+        background-size: 40%;
+        -webkit-animation: down 300s linear infinite;
+        -moz-animation: down 300s linear infinite;
+        -ms-animation: down 300s linear infinite;
+        animation: down 300s linear infinite;
+    }
+
+    #lucky-bg-2 div{
+        background-image: url('../img/bg/lucky-stars-90.png');
+        background-repeat: repeat;
+        background-size: 100%;
+        -webkit-animation: down 100s linear infinite;
+        -moz-animation: down 100s linear infinite;
+        -ms-animation: down 100s linear infinite;
+        animation: down 100s linear infinite;
+    }
+
+    #lucky-bg-3 div{
+        background-image: url('../img/bg/lucky-stars-45.png');
+        background-repeat: repeat;
+        background-size: 100%;
+        -webkit-animation: diagonal 250s linear infinite;
+        -moz-animation: diagonal 250s linear infinite;
+        -ms-animation: diagonal 250s linear infinite;
+        animation: diagonal 250s linear infinite;
+    }
+
+    .bgPattern1{
+        bottom: 100%;
+        right: 0%;
+    }
+    .bgPattern2{
+        bottom: 100%;
+        left: 100%;
+    }
+    .bgPattern3{
+        bottom: 0;
+        right: 0;
+    }
+    .bgPattern4{
+        bottom: 0;
+        left: 100%;
+    }
+
+    /*Keyframes Diagonal */
+        @keyframes diagonal {
+            0% {transform:translate3d(0px, 0px, 0px);}
+            100% {transform:translate3d(-100%, 100%, 0px);}
+        }
+
+        @-moz-keyframes diagonal {
+            0% {transform:translate3d(0px, 0px, 0px);}
+            100% {transform:translate3d(-100%, 100%, 0px);}
+        }
+
+        @-webkit-keyframes diagonal {
+            0% {transform:translate3d(0px, 0px, 0px);}
+            100% {transform:translate3d(-100%, 100%, 0px); }
+        }
+
+        @-ms-keyframes diagonal {
+            0% {transform:translate3d(0px, 0px, 0px);}
+            100% {transform:translate3d(-100%, 100%, 0px);}
+        }
+
+        @-o-keyframes diagonal {
+            0% {transform:translate3d(0px, 0px, 0px);}
+            100% {transform:translate3d(-100%, 100%, 0px);}
+        }
+    /*END Keyframes Diagonal */
+
+    /*Keyframes Down */
+        @keyframes down {
+            0% {transform:translate3d(0px, 0px, 0px);}
+            100% {transform:translate3d(0%, 100%, 0px);}
+        }
+
+        @-moz-keyframes down {
+            0% {transform:translate3d(0px, 0px, 0px);}
+            100% {transform:translate3d(0%, 100%, 0px);}
+        }
+
+        @-webkit-keyframes down {
+            0% {transform:translate3d(0px, 0px, 0px);}
+            100% {transform:translate3d(0%, 100%, 0px); }
+        }
+
+        @-ms-keyframes down {
+            0% {transform:translate3d(0px, 0px, 0px);}
+            100% {transform:translate3d(0%, 100%, 0px);}
+        }
+
+        @-o-keyframes down {
+            0% {transform:translate3d(0px, 0px, 0px);}
+            100% {transform:translate3d(0%, 100%, 0px);}
+        }
+    /*END Keyframes Down */
+/*////////////////////////////// END BACKGROUND ANIMATIONS //////////////////////////////*/
+
+
+/*////////////////////////////// INTRO ANIMATION //////////////////////////////*/
+    #animationHolder{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #animationHolder img{
+        position: absolute;
+        width: 70%;
+        height: auto;
+        margin: auto;
+        top: 0; bottom: 0; left: 0; right: 0;
+    }
+/*////////////////////////////// END INTRO ANIMATION //////////////////////////////*/
+
+
+
+
+
+/*////////////////////////////// QUESTIONS STYLING //////////////////////////////*/
+    .questionTitle{
+        position: absolute;
+        margin: auto;
+        left: 0; right: 0;
+        top: 59px;
+        width: 600px;
+        height: 124px;
+    }
+
+    .questionTitle h2{
+        margin: 30px 0;padding: 0;
+        line-height: 30px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #question1 .questionTitle{
+        background-image: url('../img/cards/cloud-1.svg');
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #question2 .questionTitle{
+        background-image: url('../img/cards/cloud-1.svg');
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #wrongAnswer .questionTitle{
+        background-image: url('../img/cards/cloud-1.svg');
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+/*////////////////////////////// END QUESTIONS STYLING //////////////////////////////*/
+
+
+/*////////////////////////////// CARDS STYLING //////////////////////////////*/
+    .cardsWrapper{
+        position: absolute;
+        width: 85%;
+        height: 367px;
+        margin: auto;
+        left: 0; right: 0;
+        bottom: 40px;
+    }
+
+    .thirdCards{
+        position: absolute;
+        margin: auto;
+        width: 250px;
+        height: 100%;
+        -webkit-transition: all .2s ease-in-out;
+           -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+             -o-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+    }
+
+    .thirdCards:first-child{
+        left: 0;
+        right: 60%;
+        bottom: -30px;
+        transform: rotate(-6deg);
+    }
+
+    .thirdCards:nth-child(2){
+        left: 0; right: 0;
+    }
+
+    .thirdCards:nth-child(3){
+        left: 60%;
+        right: 0;
+        bottom: -30px;
+        transform: rotate(6deg);
+    }
+
+    .thirdCards img{
+        position: absolute;
+        width: 100%;
+        -webkit-transition: all .2s ease-in-out;
+           -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+             -o-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+    }
+
+    .secondCards{
+        position: absolute;
+        margin: auto;
+        width: 250px;
+        height: 100%;
+        -webkit-transition: all .2s ease-in-out;
+           -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+             -o-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+    }
+
+    .secondCards:first-child{
+        left: 0;
+        right: 30%;
+        bottom: 0;
+        transform: rotate(-6deg);
+    }
+
+    .secondCards:nth-child(2){
+        left: 30%;
+        right: 0;
+        bottom: 0;
+        transform: rotate(6deg);
+    }
+
+    .secondCards img{
+        position: absolute;
+        width: 100%;
+        -webkit-transition: all .2s ease-in-out;
+           -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+             -o-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+    }
+
+    .uniqueCard{
+        position: absolute;
+        margin: auto;
+        width: 250px;
+        height: 100%;
+        left: 0; right: 0;
+        -webkit-transition: all .2s ease-in-out;
+           -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+             -o-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+    }
+
+    .uniqueCard img{
+        position: absolute;
+        width: 100%;
+        -webkit-transition: all .2s ease-in-out;
+           -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+             -o-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+    }
+
+    .innerImg{
+        width: 90% !important;
+        margin: auto;
+        top: 20px;
+        right: 0; left: 0;
+    }
+
+    .cardIcon{
+        z-index: 1;
+        -webkit-transition: all .2s ease-in-out;
+           -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+             -o-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+    }
+
+    .cardName{
+        position: absolute;
+        width: 90%;
+        height: 30px;
+        margin: auto;
+        left: 0; right: 0;
+        top: 300px;
+        z-index: 10;
+    }
+
+    .cardName h3, .cardName h4 {
+        margin: 0; padding: 0;
+        text-align: center;
+    }
+
+    #seenCard h3{
+        font-size: 14px;
+    }
+    #seenCard h4{
+        font-weight: 18px;
+    }
+
+    .cardShadow{
+        position: absolute;
+        width: 80%;
+        margin: auto;
+        left: 0; right: 0;
+        top: 250px;
+    }
+/*////////////////////////////// END CARDS STYLING //////////////////////////////*/
+
+
+
+
+
+
+/*////////////////////////////// STREAMING STYLING //////////////////////////////*/
+    .fullEmbedWrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .embedWrapper{
+        position: absolute;
+        width: 650px;
+        height: 380px;
+        margin: auto;
+        top: 0; bottom: 0; right: 0; left: 0;
+        border: 5px solid #e8545e;
+        box-shadow: 12px 12px 2px #00131d;
+    }
+
+    .embedNavWrapper{
+        position: absolute;
+        width: 80px;
+        height: 225px;
+        margin: auto;
+        top: 0; bottom: 0;
+        right: 0;
+    }
+
+    .embedIcons{
+        position: absolute;
+        right: 15px;
+        width: 60px;
+        height: 60px;
+        margin: auto;
+        border-radius: 50%;
+        border: 0px solid #00131d;
+        -webkit-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+        cursor: pointer;
+    }
+
+    .embedIcons:hover{
+        border: 8px solid #00131d;
+        background-color: #e8545e;
+    }
+
+    .embedIcons:nth-child(2){
+        top: 0; bottom: 0;
+    }
+
+    .embedIcons:last-child{
+        bottom: 0;
+    }
+
+    .embedLogoWrapper{
+        position: absolute;
+        width: 246px;
+        height: 82px;
+        margin: auto;
+        right: 0; left: 0; 
+        bottom: 10px;
+    }
+
+    #contactWrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        left: 100%;
+        background-color: aqua;
+        -webkit-transition: all .4s ease-in-out;
+           -moz-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+             -o-transition: all .4s ease-in-out;
+                transition: all .4s ease-in-out;
+    }
+
+    .bringContact{
+        left: 0 !important;
+    }
+
+    .dataWrapper{
+        position: absolute;
+        width: 600px;
+        height: 90%;
+        margin: auto;
+        left: 0; right: 0; top: 0; bottom: 0;
+        text-align: center;
+        color: #ecf1f9;
+    }
+
+    .personaWrapper h1, .personaWrapper h3{
+        margin: 0;
+    }
+/*////////////////////////////// END STREAMING STYLING //////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////// JAVASCRIPT OVER STYLING ANIMATIONS //////////////////////////////*/
+
+    .hoverAppear{
+        opacity: 0;
+    }
+
+    .upMove, .shrinkMove{
+        -webkit-transition: all .2s ease-in-out;
+           -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+             -o-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+    }
+
+    .colorHover{
+        color: #edf1fa !important;
+    }
+
+    .fadeIn{
+        opacity: 1;
+    }
+
+    .goUpper{
+        transform: translate3D(0px, -20px, 0px) !important;
+    }
+
+    .goShrink{
+        -webkit-transform: scale(0.8,0.8) !important;
+           -moz-transform: scale(0.8,0.8) !important;
+            -ms-transform: scale(0.8,0.8) !important;
+             -0-transform: scale(0.8,0.8) !important;
+                transform: scale(0.8,0.8) !important;
+    }
+/*////////////////////////////// END JAVASCRIPT OVER STYLING //////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.crystalProtection{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
