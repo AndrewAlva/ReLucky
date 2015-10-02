@@ -52,6 +52,17 @@ jQuery(document).ready(function($) {
 		// END HOVER ANIMATION
 	// END UNIQUE OPTION CARDS ANIMATION
 
+	// CARDS SHADOWS
+		$('.upMove').mouseenter(function(event) {
+			$(this).find('.cardDropShadow').addClass('cardDropShadowHover');
+		});
+		$('.upMove').mouseleave(function(event) {
+			$(this).find('.cardDropShadow').removeClass('cardDropShadowHover');
+		});
+	// END CARDS SHADOWS
+
+
+
 	// GET TIME
 		function addZero(i) {
 		    if (i < 10) {
@@ -80,6 +91,12 @@ jQuery(document).ready(function($) {
 
 		$('.link-Contact').click(function() {
 			$('#contactWrapper').addClass('bringContact');
+			$('.fullEmbedWrapper').addClass('pushEmbed');
+		});
+
+		$('#closeContact').click(function() {
+			$('#contactWrapper').removeClass('bringContact');
+			$('.fullEmbedWrapper').removeClass('pushEmbed');
 		});
 	// END LINKS HREF
 });
