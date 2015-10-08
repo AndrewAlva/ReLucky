@@ -30,12 +30,14 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #202020;
+    color: #fff;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #202020;
+    color: #fff;
     text-shadow: none;
 }
 
@@ -94,12 +96,38 @@ textarea {
 }
 
 /* ==========================================================================
+    INIT Browser Sizes
+========================================================================== */
+
+    @media screen (max-width: 767px){
+        #mobile{}
+    }
+
+    @media screen (min-width: 768px){
+        #tablet{}
+    }
+
+    @media screen (min-width: 992px){
+        #laptops{}
+    }
+
+    @media screen (min-width: 1200px){
+        #desktops{}
+    }
+
+/* ==========================================================================
+    END Browser Sizes
+========================================================================== */
+
+/* ==========================================================================
    INIT LUCKY COLOR PALETTE
 ========================================================================== */
     .BLUE_NAVY{ color: #0c1f28; }
     .BLUE_NAVY_SHADOW{color: #00131d; }
     .RED{ color: #e8545e; }
+    .RED_SHADOW{ color: #c83547; }
     .GRAY{ color: #ecf1f9; }
+    .GRAY_SHADOW{ color: #d7dbe3; }
     .WHITE{ color: #edf1fa; }
 /* ==========================================================================
    END LUCKY COLOR PALETTE
@@ -110,7 +138,7 @@ textarea {
    NDRW's custom styles
    ========================================================================== */
 html{
-    font-family: 'Sniglet', cursive;
+    font-family: 'Sniglet', sans-serif, helvetica, tahoma, cursive;
 }
 
 body{
@@ -125,6 +153,13 @@ body{
         width: 100%;
         height: 100%;
         min-height: 600px;
+        opacity: 1;
+
+        -webkit-transition: all .8s ease-in-out;
+           -moz-transition: all .8s ease-in-out;
+            -ms-transition: all .8s ease-in-out;
+             -o-transition: all .8s ease-in-out;
+                transition: all .8s ease-in-out;
     }
 
     #currentWindow{
@@ -139,8 +174,7 @@ body{
         width: 100%;
         height: 100%;
         bottom: 0;
-        display: none;
-         -webkit-transition: all .8s ease-in-out;
+        -webkit-transition: all .8s ease-in-out;
            -moz-transition: all .8s ease-in-out;
             -ms-transition: all .8s ease-in-out;
              -o-transition: all .8s ease-in-out;
@@ -162,8 +196,13 @@ body{
 /*////////////////////////////// END WRAPPERS STYLING //////////////////////////////*/
 
 /*////////////////////////////// BACKGROUND ANIMATIONS //////////////////////////////*/
+    #container{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
 
-    .bgsWrapper{
+    #bgsWrapper{
         position: absolute;
         width: 100%;
         height: 100%;
@@ -173,113 +212,55 @@ body{
         overflow: hidden;
     }
 
-    .bgsWrapper div{
+    .layer {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 200vw;
+        height: 100vh;
     }
 
-    #lucky-bg-1 div{
-        background-image: url('../img/bg/lucky-stars.png');
+    .innerLayer{
+        position: absolute;
+        width: 200vw;
+        height: 200vh;
+    }
+
+    .stars1{
+        background-image: url(../img/bg/lucky-stars.svg);
+        background-size: 50%;
         background-repeat: repeat;
-        opacity: 0.5;
-        background-size: 40%;
-        -webkit-animation: down 300s linear infinite;
-        -moz-animation: down 300s linear infinite;
-        -ms-animation: down 300s linear infinite;
-        animation: down 300s linear infinite;
+
+        -webkit-transition: all 2.4s ease;
+           -moz-transition: all 2.4s ease;
+            -ms-transition: all 2.4s ease;
+             -o-transition: all 2.4s ease;
+                transition: all 2.4s ease;
+        
     }
 
-    #lucky-bg-2 div{
-        background-image: url('../img/bg/lucky-stars-90.png');
+    .stars2{
+        background-image: url(../img/bg/lucky-stars-1.svg);
+        background-size: 50%;
         background-repeat: repeat;
-        background-size: 100%;
-        -webkit-animation: down 100s linear infinite;
-        -moz-animation: down 100s linear infinite;
-        -ms-animation: down 100s linear infinite;
-        animation: down 100s linear infinite;
-    }
+        opacity: 0.8;
 
-    #lucky-bg-3 div{
-        background-image: url('../img/bg/lucky-stars-45.png');
+        -webkit-transition: all 2.8s ease;
+           -moz-transition: all 2.8s ease;
+            -ms-transition: all 2.8s ease;
+             -o-transition: all 2.8s ease;
+                transition: all 2.8s ease;
+    }
+    .stars3{
+        background-image: url(../img/bg/lucky-stars-2.svg);
+        background-size: 33.33%;
         background-repeat: repeat;
-        background-size: 100%;
-        -webkit-animation: diagonal 250s linear infinite;
-        -moz-animation: diagonal 250s linear infinite;
-        -ms-animation: diagonal 250s linear infinite;
-        animation: diagonal 250s linear infinite;
+        opacity: 0.2;
+
+        -webkit-transition: all 3.4s ease;
+           -moz-transition: all 3.4s ease;
+            -ms-transition: all 3.4s ease;
+             -o-transition: all 3.4s ease;
+                transition: all 3.4s ease;
     }
-
-    .bgPattern1{
-        bottom: 100%;
-        right: 0%;
-    }
-    .bgPattern2{
-        bottom: 100%;
-        left: 100%;
-    }
-    .bgPattern3{
-        bottom: 0;
-        right: 0;
-    }
-    .bgPattern4{
-        bottom: 0;
-        left: 100%;
-    }
-
-    /*Keyframes Diagonal */
-        @keyframes diagonal {
-            0% {transform:translate3d(0px, 0px, 0px);}
-            100% {transform:translate3d(-100%, 100%, 0px);}
-        }
-
-        @-moz-keyframes diagonal {
-            0% {transform:translate3d(0px, 0px, 0px);}
-            100% {transform:translate3d(-100%, 100%, 0px);}
-        }
-
-        @-webkit-keyframes diagonal {
-            0% {transform:translate3d(0px, 0px, 0px);}
-            100% {transform:translate3d(-100%, 100%, 0px); }
-        }
-
-        @-ms-keyframes diagonal {
-            0% {transform:translate3d(0px, 0px, 0px);}
-            100% {transform:translate3d(-100%, 100%, 0px);}
-        }
-
-        @-o-keyframes diagonal {
-            0% {transform:translate3d(0px, 0px, 0px);}
-            100% {transform:translate3d(-100%, 100%, 0px);}
-        }
-    /*END Keyframes Diagonal */
-
-    /*Keyframes Down */
-        @keyframes down {
-            0% {transform:translate3d(0px, 0px, 0px);}
-            100% {transform:translate3d(0%, 100%, 0px);}
-        }
-
-        @-moz-keyframes down {
-            0% {transform:translate3d(0px, 0px, 0px);}
-            100% {transform:translate3d(0%, 100%, 0px);}
-        }
-
-        @-webkit-keyframes down {
-            0% {transform:translate3d(0px, 0px, 0px);}
-            100% {transform:translate3d(0%, 100%, 0px); }
-        }
-
-        @-ms-keyframes down {
-            0% {transform:translate3d(0px, 0px, 0px);}
-            100% {transform:translate3d(0%, 100%, 0px);}
-        }
-
-        @-o-keyframes down {
-            0% {transform:translate3d(0px, 0px, 0px);}
-            100% {transform:translate3d(0%, 100%, 0px);}
-        }
-    /*END Keyframes Down */
 /*////////////////////////////// END BACKGROUND ANIMATIONS //////////////////////////////*/
 
 /*////////////////////////////// INTRO ANIMATION //////////////////////////////*/
@@ -290,12 +271,18 @@ body{
         overflow: hidden;
     }
 
-    #animationHolder img{
+    .frameHold img{
         position: absolute;
         width: 70%;
         height: auto;
         margin: auto;
         top: 0; bottom: 0; left: 0; right: 0;
+    }
+
+    .frameHold{
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
 /*////////////////////////////// END INTRO ANIMATION //////////////////////////////*/
 
@@ -306,7 +293,7 @@ body{
 
 /*////////////////////////////// QUESTIONS STYLING //////////////////////////////*/
     .questionTitle{
-        position: absolute;
+        position: relative;
         margin: auto;
         left: 0; right: 0;
         top: 59px;
@@ -315,215 +302,588 @@ body{
     }
 
     .questionTitle h2{
-        margin: 30px 0;padding: 0;
+        position: absolute;
+        left: 0; right: 0;
+        margin: 40px 0;padding: 0;
         line-height: 30px;
         text-align: center;
         font-size: 30px;
     }
 
-    #question1 .questionTitle{
-        background-image: url('../img/cards/cloud-1.svg');
+    #questions3 .questionTitle{
+        background-image: url('../img/cards/cloud-sm.svg');
         -webkit-background-size: 100%;
         background-size: 100%;
         background-repeat: no-repeat;
     }
 
-    #question2 .questionTitle{
-        background-image: url('../img/cards/cloud-1.svg');
+    #questions2 .questionTitle{
+        width: 750px;
+        height: 155px;
+        top: 30px;
+        background-image: url('../img/cards/cloud-sm.svg');
         -webkit-background-size: 100%;
         background-size: 100%;
         background-repeat: no-repeat;
+    }
+
+    #questions2 .questionTitle h2{
+        padding: 0 150px;
+        font-size: 24px;
     }
 
     #wrongAnswer .questionTitle{
-        background-image: url('../img/cards/cloud-1.svg');
+        background-image: url('../img/cards/cloud-sm.svg');
         -webkit-background-size: 100%;
         background-size: 100%;
         background-repeat: no-repeat;
+    }
+
+    #wrongAnswer h2{
+        font-size: 24px !important;
+        margin: 30px 0;
+    }
+
+    #advice1 .questionTitle{
+        background-image: url('../img/cards/cloud-lg.svg');
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 980px !important;
+        height: 154px !important;
+    }
+
+    #advice1 h2{
+        font-size: 22px !important;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    #goLuckyPortfolio .questionTitle{
+        width: 650px;
+        height: 134px;
+        background-image: url('../img/cards/cloud-sm.svg');
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #goLuckyPortfolio .cardName h3{
+        font-size: 17px;
+    }
+
+    #flyWithUs .questionTitle{
+        background-image: url('../img/cards/cloud-sm.svg');
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #giftCode .questionTitle{
+        background-image: url('../img/cards/cloud-lg.svg');
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 980px !important;
+        height: 154px !important;
+    }
+
+    #giftCode .questionTitle h2{
+        position: relative;
+        font-size: 22px;
+        margin: 0 0;
+        top: 50px;
+        padding: 0 80px;
+    }
+
+    #giftCode .questionTitle h3{
+        position: relative;
+        font-size: 18px;
+        text-align: center;
+        top: 30px;
     }
 /*////////////////////////////// END QUESTIONS STYLING //////////////////////////////*/
 
 /*////////////////////////////// CARDS STYLING //////////////////////////////*/
     .cardsWrapper{
-        position: absolute;
+        position: relative;
         width: 85%;
-        height: 367px;
+        height: 340px;
         margin: auto;
         left: 0; right: 0;
-        bottom: 40px;
+        top: 15%;
     }
 
-    .thirdCards{
-        position: absolute;
-        margin: auto;
-        width: 250px;
-        height: 100%;
-        cursor: pointer;
-        -webkit-transition: all .2s ease-in-out;
-           -moz-transition: all .2s ease-in-out;
-            -ms-transition: all .2s ease-in-out;
-             -o-transition: all .2s ease-in-out;
-                transition: all .2s ease-in-out;
-    }
+    /*////////////////////////////// THIRD CARDS STYLING //////////////////////////////*/
+        .thirdCards{
+            position: absolute;
+            margin: auto;
+            width: 230px;
+            height: 100%;
+            cursor: pointer;
+            -webkit-transition: all .2s ease-in-out;
+               -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                 -o-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+        }
 
-    .thirdCards:first-child{
-        left: 0;
-        right: 60%;
-        bottom: -30px;
-        transform: rotate(-3deg);
-    }
+        .thirdCards:first-child{
+            left: 0;
+            right: 60%;
+            bottom: -30px;
+            transform: rotate(-3deg);
+        }
 
-    .thirdCards:nth-child(2){
-        left: 0; right: 0;
-    }
+        .thirdCards:nth-child(2){
+            left: 0; right: 0;
+        }
 
-    .thirdCards:nth-child(3){
-        left: 60%;
-        right: 0;
-        bottom: -30px;
-        transform: rotate(3deg);
-    }
+        .thirdCards:nth-child(3){
+            left: 60%;
+            right: 0;
+            bottom: -30px;
+            transform: rotate(3deg);
+        }
 
-    .thirdCards img{
-        position: absolute;
-        width: 100%;
-        border-radius: 10px;
-        -webkit-transition: all .4s ease-in-out;
-           -moz-transition: all .4s ease-in-out;
-            -ms-transition: all .4s ease-in-out;
-             -o-transition: all .4s ease-in-out;
-                transition: all .4s ease-in-out;
-    }
+        .thirdCards img{
+            position: absolute;
+            width: 100%;
+            border-radius: 10px;
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+        }
+    /*////////////////////////////// END THIRD CARDS STYLING //////////////////////////*/
 
-    .secondCards{
-        position: absolute;
-        margin: auto;
-        width: 250px;
-        height: 100%;
-        cursor: pointer;
-        -webkit-transition: all .2s ease-in-out;
-           -moz-transition: all .2s ease-in-out;
-            -ms-transition: all .2s ease-in-out;
-             -o-transition: all .2s ease-in-out;
-                transition: all .2s ease-in-out;
-    }
+    /*////////////////////////////// SECOND CARDS STYLING //////////////////////////////*/
+        .secondCards{
+            position: absolute;
+            margin: auto;
+            width: 230px;
+            height: 100%;
+            cursor: pointer;
+            -webkit-transition: all .2s ease-in-out;
+               -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                 -o-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+        }
 
-    .secondCards:first-child{
-        left: 0;
-        right: 30%;
-        bottom: 0;
-        transform: rotate(-3deg);
-    }
+        .secondCards:first-child{
+            left: 0;
+            right: 40%;
+            bottom: 0;
+            transform: rotate(-3deg);
+        }
 
-    .secondCards:nth-child(2){
-        left: 30%;
-        right: 0;
-        bottom: 0;
-        transform: rotate(3deg);
-    }
+        .secondCards:nth-child(2){
+            left: 40%;
+            right: 0;
+            bottom: 0;
+            transform: rotate(3deg);
+        }
 
-    .secondCards img{
-        position: absolute;
-        width: 100%;
-        border-radius: 10px;
-        -webkit-transition: all .2s ease-in-out;
-           -moz-transition: all .2s ease-in-out;
-            -ms-transition: all .2s ease-in-out;
-             -o-transition: all .2s ease-in-out;
-                transition: all .2s ease-in-out;
-    }
+        .secondCards img{
+            position: absolute;
+            width: 100%;
+            border-radius: 10px;
+            -webkit-transition: all .2s ease-in-out;
+               -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                 -o-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+        }
+    /*////////////////////////////// END SECOND CARDS STYLING //////////////////////////*/
 
-    .uniqueCard{
-        position: absolute;
-        margin: auto;
-        width: 250px;
-        height: 100%;
-        left: 0; right: 0;
-        border-radius: 10px;
-        cursor: pointer;
-        -webkit-transition: all .2s ease-in-out;
-           -moz-transition: all .2s ease-in-out;
-            -ms-transition: all .2s ease-in-out;
-             -o-transition: all .2s ease-in-out;
-                transition: all .2s ease-in-out;
-    }
+    /*////////////////////////////// UNIQUE CARDS STYLING //////////////////////////////*/
+        .uniqueCard{
+            position: absolute;
+            margin: auto;
+            width: 230px;
+            height: 96%;
+            left: 0; right: 0;
+            border-radius: 10px;
+            cursor: pointer;
+            -webkit-transition: all .2s ease-in-out;
+               -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                 -o-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+        }
 
-    .uniqueCard img{
-        position: absolute;
-        width: 100%;
-        -webkit-transition: all .2s ease-in-out;
-           -moz-transition: all .2s ease-in-out;
-            -ms-transition: all .2s ease-in-out;
-             -o-transition: all .2s ease-in-out;
-                transition: all .2s ease-in-out;
-    }
+        .uniqueCard img{
+            position: absolute;
+            width: 100%;
+            -webkit-transition: all .2s ease-in-out;
+               -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                 -o-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+        }
+    /*////////////////////////////// END UNIQUE CARDS STYLING //////////////////////////*/
 
-    .innerImg{
-        width: 90% !important;
-        margin: auto;
-        top: 20px;
-        right: 0; left: 0;
-    }
+    /*////////////////////////////// ADVICE CARDS STYLING //////////////////////////////*/
+        .advicePages .cardsWrapper{
+            height: 305px;
+        }
 
-    .cardIcon{
-        z-index: 1;
-        -webkit-transition: all .2s ease-in-out;
-           -moz-transition: all .2s ease-in-out;
-            -ms-transition: all .2s ease-in-out;
-             -o-transition: all .2s ease-in-out;
-                transition: all .2s ease-in-out;
-    }
+        .adviceCards{
+            position: absolute;
+            margin: auto;
+            width: 215px;
+            height: 100%;
+            cursor: pointer;
+            -webkit-transition: all .6s ease-in-out;
+               -moz-transition: all .6s ease-in-out;
+                -ms-transition: all .6s ease-in-out;
+                 -o-transition: all .6s ease-in-out;
+                    transition: all .6s ease-in-out;
+        }
 
-    .cardName{
-        position: absolute;
-        width: 90%;
-        height: 30px;
-        margin: auto;
-        left: 0; right: 0;
-        top: 300px;
-        z-index: 10;
-    }
+        .adviceCards:first-child{
+            left: 0;
+            right: 60%;
+            bottom: -30px;
+            transform: rotate(-3deg);
+        }
 
-    .cardName h3, .cardName h4 {
-        margin: 0; padding: 0;
-        text-align: center;
-    }
+        .adviceCards:nth-child(2){
+            left: 0; right: 0;
+        }
 
-    #seenCard h3{
-        font-size: 14px;
-    }
-    #seenCard h4{
-        font-weight: 18px;
-    }
+        .adviceCards:nth-child(3){
+            left: 60%;
+            right: 0;
+            bottom: -30px;
+            transform: rotate(3deg);
+        }
 
-    .cardShadow{
-        position: absolute;
-        width: 80%;
-        margin: auto;
-        left: 0; right: 0;
-        top: 250px;
-    }
+        .adviceCards img{
+            position: absolute;
+            width: 100%;
+            border-radius: 10px;
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+        }
 
-    .cardDropShadow{
-        box-shadow: 12px 12px 2px #00131d;
-        -webkit-transition: all .4s ease-in-out;
-           -moz-transition: all .4s ease-in-out;
-            -ms-transition: all .4s ease-in-out;
-             -o-transition: all .4s ease-in-out;
-                transition: all .4s ease-in-out;
-    }
+        .adviceCards .cardShadow{
+            top: 220px !important;
+        }
 
-    .cardDropShadowHover{
-        box-shadow: 20px 30px 20px #00131d;
-    }
+        .agencyAdvice{
+            position: absolute;
+            width: 90%;
+            margin: auto;
+            left: 0; right: 0;
+        }
+
+        .shortAdvice{
+            top: 135px;
+        }
+
+        .longAdvice{
+            top: 115px;
+        }
+
+        .agencyAdvice h3{
+            position: relative;
+            margin: auto;
+            left: 0; right: 0;
+            text-transform: uppercase;
+            font-size: 26px;
+            text-align: center;
+            text-shadow: 3px 3px 0px #d7dbe3;
+
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+        }
+
+        .hoverTextShadow{
+            font-size: 28px !important;
+            text-shadow: 6px 3px 0px #c83547 !important;
+        }
+
+        .underlineWrap{
+            position: relative;
+            width: 60%;
+            margin: auto;
+            left: 0; right: 0;
+            top: 5px;
+        }
+
+        .underLine{
+            position: absolute;
+            width: 0%;
+            height: 5px;
+            border-radius: 5px;
+            background-color: #0c1f28;
+            opacity: 1;
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+        }
+
+        .underlineHover{
+            width: 100% !important;
+        }
+
+        .agencyData{
+            position: absolute;
+            height: 90px;
+            width: 215px;
+            margin: auto;
+            top: 0; bottom: 0; left: 0; right: 0;
+            opacity: 1;
+
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+        }
+
+        .agencyData p{
+            position: absolute;
+            margin: auto;
+            top: 0; bottom: 0; left: 0; right: 0;
+            text-align: center;
+            -webkit-transform: rotate(-90deg) !important;
+               -moz-transform: rotate(-90deg) !important;
+                -ms-transform: rotate(-90deg) !important;
+                 -o-transform: rotate(-90deg) !important;
+                    transform: rotate(-90deg) !important;
+        }
+
+        .agencyData a{
+            color: #0c1f28;
+        }
+
+        .continueFooter{
+            position: absolute;
+            bottom: 0;
+            width: 220px;
+            height: 50px;
+            margin: auto;
+            right: 0; left: 0;
+            color: #edf1fa;
+            cursor: pointer;
+        }
+
+        .continueFooter p, .continueFooter img{
+            display: inline-block;
+        }
+
+        .continueFooter img{
+            width: 30px;
+            margin-left: 5px;
+            -webkit-transform: rotate(180deg) !important;
+               -moz-transform: rotate(180deg) !important;
+                -ms-transform: rotate(180deg) !important;
+                 -o-transform: rotate(180deg) !important;
+                    transform: rotate(180deg) !important;
+        }
+
+        .continueFooter:hover{
+            -webkit-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+               -moz-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+                -ms-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+                 -o-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+                    animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+        }
+
+        /*Keyframes Keep Going in Advice Cards */
+            @keyframes keepGoing {
+                0% {left: 0px;}
+                50% {left: 20px;}
+                100% {left: 0px;}
+            }
+
+            @-moz-keyframes keepGoing {
+                0% {left: 0px;}
+                50% {left: 20px;}
+                100% {left: 0px;}
+            }
+
+            @-webkit-keyframes keepGoing {
+                0% {left: 0px;}
+                50% {left: 20px;}
+                100% {left: 0px;}
+            }
+
+            @-ms-keyframes keepGoing {
+                0% {left: 0px;}
+                50% {left: 20px;}
+                100% {left: 0px;}
+            }
+
+            @-o-keyframes keepGoing {
+                0% {left: 0px;}
+                50% {left: 20px;}
+                100% {left: 0px;}
+            }
+        /*END Keyframes Keep Going in Advice Cards */
+    /*////////////////////////////// END ADVICE CARDS STYLING //////////////////////////*/
+
+    /*////////////////////////////// LANGUAGE DOB/SUBTITLES CARDS STYLING //////////////////////////*/
+        .langPages .cardsWrapper{
+            position: absolute;
+            top: 0; bottom: 0;
+        }
+
+        .langCards{
+            position: absolute;
+            margin: auto;
+            width: 240px;
+            height: 100%;
+            cursor: pointer;
+            -webkit-transition: all .2s ease-in-out;
+               -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                 -o-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+        }
+
+        .langCards:first-child{
+            left: 0;
+            right: 40%;
+            bottom: 0;
+            transform: rotate(-3deg);
+        }
+
+        .langCards:nth-child(2){
+            left: 40%;
+            right: 0;
+            bottom: 0;
+            transform: rotate(3deg);
+        }
+
+        .langCards img{
+            position: absolute;
+            width: 100%;
+            border-radius: 10px;
+            -webkit-transition: all .2s ease-in-out;
+               -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                 -o-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+        }
+    /*////////////////////////////// END LANGUAGE DOB/SUBTITLES CARDS STYLING //////////////////////////*/ 
+
+    /*////////////////////////////// GIFT CARD STYLING //////////////////////////////*/
+        
+
+        #giftCard{
+            position: absolute;
+            margin: auto;
+            width: 215px;
+            height: 100%;
+            -webkit-transition: all .6s ease-in-out;
+               -moz-transition: all .6s ease-in-out;
+                -ms-transition: all .6s ease-in-out;
+                 -o-transition: all .6s ease-in-out;
+                    transition: all .6s ease-in-out;
+        }
+
+        
+        #giftCard img{
+            position: absolute;
+            width: 100%;
+            border-radius: 10px;
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+        }
+
+        .luckyCode{
+            font-size: 22px;
+        }
+    /*////////////////////////////// END GIFT CARD STYLING //////////////////////////*/
+
+
+    /*////// CARDS ELEMENTS ///////////////*/
+        .innerImg{
+            width: 90% !important;
+            margin: auto;
+            top: 20px;
+            right: 0; left: 0;
+
+            -webkit-transition: all .6s cubic-bezier(.35,-1.1,.48,2.1) !important;
+               -moz-transition: all .6s cubic-bezier(.35,-1.1,.48,2.1) !important;
+                -ms-transition: all .6s cubic-bezier(.35,-1.1,.48,2.1) !important;
+                 -o-transition: all .6s cubic-bezier(.35,-1.1,.48,2.1) !important;
+                    transition: all .6s cubic-bezier(.35,-1.1,.48,2.1) !important;
+        }
+
+        .cardIcon{
+            z-index: 1;
+            -webkit-transition: all .2s ease-in-out;
+               -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                 -o-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+        }
+
+        .cardName{
+            position: absolute;
+            width: 90%;
+            height: 30px;
+            margin: auto;
+            left: 0; right: 0;
+            top: 270px;
+        }
+
+        .cardName h3, .cardName h4 {
+            margin: 0; padding: 0;
+            text-align: center;
+        }
+
+        #seenCard h3{
+            font-size: 14px;
+        }
+        #seenCard h4{
+            font-weight: 18px;
+        }
+
+        .cardShadow{
+            position: absolute;
+            width: 80%;
+            margin: auto;
+            left: 0; right: 0;
+            top: 230px;
+        }
+
+        .cardDropShadow{
+            box-shadow: -12px 12px 2px #00131d;
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+        }
+
+        .cardDropShadowHover{
+            box-shadow: -20px 30px 20px #00131d;
+        }
+    /*////// END CARDS ELEMENTS //////////*/
 /*////////////////////////////// END CARDS STYLING //////////////////////////////*/
 
 
 
 
-
-
-/*////////////////////////////// STREAMING STYLING //////////////////////////////*/
+/*////////////////////////////// STREAMING / VIDEO STYLING //////////////////////////////*/
     .fullEmbedWrapper{
         position: absolute;
         width: 100%;
@@ -568,8 +928,8 @@ body{
     .embedIcons{
         position: absolute;
         right: 15px;
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         margin: auto;
         border-radius: 50%;
         border: 0px solid #00131d;
@@ -592,6 +952,10 @@ body{
 
     .embedIcons:last-child{
         bottom: 0;
+    }
+
+    .embedIcons img{
+        width: 50px;
     }
 
     .embedLogoWrapper{
@@ -622,6 +986,7 @@ body{
         height: 50px;
         left: 30px;
         top: 30px;
+        cursor: pointer;
         background-image: url(../img/icons/back-lucky.png);
         background-size: 80%;
         background-position: center center;
@@ -694,7 +1059,7 @@ body{
     .personaWrapper h1, .personaWrapper h3{
         margin: 0;
     }
-/*////////////////////////////// END STREAMING STYLING //////////////////////////////*/
+/*////////////////////////////// END STREAMING / VIDEO STYLING //////////////////////////////*/
 
 
 
@@ -713,13 +1078,13 @@ body{
 
 
 
-/*////////////////////////////// JAVASCRIPT OVER STYLING ANIMATIONS //////////////////////////////*/
+/*/////////////////////////// JAVASCRIPT OVER STYLING ANIMATIONS //////////////////////////////*/
 
     .hoverAppear{
         opacity: 0;
     }
 
-    .upMove, .shrinkMove{
+    .upMove, .shrinkMove {
         -webkit-transition: all .3s ease-in-out;
            -moz-transition: all .3s ease-in-out;
             -ms-transition: all .3s ease-in-out;
@@ -744,13 +1109,98 @@ body{
     }
 
     .goShrink{
-        -webkit-transform: scale(0.8,0.8) !important;
-           -moz-transform: scale(0.8,0.8) !important;
-            -ms-transform: scale(0.8,0.8) !important;
-             -0-transform: scale(0.8,0.8) !important;
-                transform: scale(0.8,0.8) !important;
+        -webkit-transform: scale(0.7,0.7) !important;
+           -moz-transform: scale(0.7,0.7) !important;
+            -ms-transform: scale(0.7,0.7) !important;
+             -0-transform: scale(0.7,0.7) !important;
+                transform: scale(0.7,0.7) !important;
     }
-/*////////////////////////////// END JAVASCRIPT OVER STYLING //////////////////////////////*/
+/*/////////////////////////// END JAVASCRIPT OVER STYLING /////////////////////////////////////*/
+
+/*/////////////////////////// JAVASCRIPT CLICK STYLING ANIMATION ///////////////////////////////*/
+    /*//////// PUSH STARS BG INTERACTION ////////////*/
+        .pullLeft{
+            -webkit-transform: translate3D(-100vw, 0px, 0px) rotate(-180deg) !important;
+               -moz-transform: translate3D(-100vw, 0px, 0px) rotate(-180deg) !important;
+                -ms-transform: translate3D(-100vw, 0px, 0px) rotate(-180deg) !important;
+                 -o-transform: translate3D(-100vw, 0px, 0px) rotate(-180deg) !important;
+                    transform: translate3D(-100vw, 0px, 0px) rotate(-180deg) !important;
+        }
+    /*//////// END PUSH STARS BG INTERACTION ////////////*/
+
+    /*//////// ADVICE CARDS INTERACTION ////////////*/
+
+
+        .adviceCardSelected{
+            left: 0 !important;
+            right: 0 !important;
+            top: 0 !important;
+            bottom: 0 !important;
+            -webkit-transform: rotate(90deg) !important;
+               -moz-transform: rotate(90deg) !important;
+                -ms-transform: rotate(90deg) !important;
+                 -o-transform: rotate(90deg) !important;
+                    transform: rotate(90deg) !important;
+        }
+
+        .adviceCardDropShadowHover{
+            box-shadow: 12px 12px 2px #00131d !important;
+        }
+
+        .noPointer{
+            cursor: default !important;
+        }
+    /*//////// END ADVICE CARDS INTERACTION ////////*/
+/*/////////////////////////// END JAVASCRIPT CLICK STYLING ANIMATION ///////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*/////////////////////////// RESPONSIVE STYLING /////////////////////////////////////////*/
+    /*///// MOBILE STYLING /////*/
+        @media (max-width: 767px){
+            #windowWrapper{
+                min-height: 320px;
+            }
+        }
+    /*///// END MOBILE STYLING /////*/
+
+    /*///// TABLET STYLING /////*/
+        @media (min-width: 768px){
+            
+        }
+    /*///// END TABLET STYLING /////*/
+
+    /*/////  BIG DESKTOP STYLING /////*/
+        @media (min-width: 1200px){
+            
+        }
+    /*///// END BIG DESKTOP STYLING /////*/
+
+    
+    
+/*/////////////////////////// END RESPONSIVE STYLING /////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
 
 /* ==========================================================================
    Helper classes
@@ -761,6 +1211,18 @@ body{
     width: 100%;
     height: 100%;
     z-index: 1000;
+}
+
+.crystal{
+    opacity: 0 !important;
+}
+
+.notHere{
+    display: none !important;
+}
+
+.bringToFront{
+    z-index: 1000000 !important;
 }
 
 /*
