@@ -48,7 +48,7 @@
 
             <div id="currentWindow">
                 <!-- INTRO ANIMATION -->
-                <div id="welcomePage" class="currentPage">
+                <!-- <div id="welcomePage" class="currentPage">
                     <div id="animationHolder">
                         <div id="animationFrame1" class="frameHold crystal" value="1">
                             <img src="img/animation/Lucky_Intro_0001.png" alt="Lucky Ideas">
@@ -179,10 +179,12 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
+
+                <!-- INTRO QUESTION -->
 
                 <!-- 3 ANSWERS QUESTION -->
-                <!-- <div id="questions3" class="waitingPage">
+                <div id="questions3" class="currentPage waitingPage">
                     <div class="questionTitle">
                         <h2>¿Quién eres?</h2>
                     </div>
@@ -227,16 +229,20 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
+
+                <!-- FIRST QUESTION CLIENT / TALENT / COMPETITION  -->
                 <!-- 2 ANSWERS QUESTION -->
-                <!-- <div id="questions2" class="waitingPage">
+                <div id="FirstQuestion" class="questions2 currentPage waitingPage">
                     <div class="questionTitle">
-                        <h2>¿Buscas agencias multigalardonadas y con larga trayectoria?</h2>
+
+                        <!-- INSERT RIGHT QUESTION  -->
+                        <h2 id="firstBlankQuestion"> </h2>
                     </div>
 
                     <div class="cardsWrapper">
-                        <div id="cardYes" class="secondCards activeCardShadow">
+                        <div class="yesCards secondCards activeCardShadow">
                             <div class="upMove">
                                 <div class="cardIcon">
                                     <img class="cardDropShadow" src="img/cards/card-bg.png" alt="Yes">
@@ -257,7 +263,7 @@
                             </div>
                         </div>
 
-                        <div id="cardNo" class="secondCards activeCardShadow">
+                        <div class="noCards secondCards activeCardShadow">
                             <div class="upMove">
 
                                 <div class="cardIcon">
@@ -281,10 +287,124 @@
                         </div>
                         
                     </div>
-                </div> -->
+                </div>
+
+
+                <!-- SECOND QUESTION CLIENT / TALENT / COMPETITION  -->
+                <!-- 2 ANSWERS QUESTION -->
+                <div id="SecondQuestion" class="questions2 currentPage waitingPage">
+                    <div class="questionTitle">
+                        <h2 id="secondBlankQuestion"> </h2>
+                    </div>
+
+                    <div class="cardsWrapper">
+                        <div class="yesCards secondCards activeCardShadow">
+                            <div class="upMove">
+                                <div class="cardIcon">
+                                    <img class="cardDropShadow" src="img/cards/card-bg.png" alt="Yes">
+                                    <img class="hoverAppear" src="img/cards/card-bg-hover.png" alt="Yes">
+
+                                    <div class="cardShadow">
+                                        <img class="shrinkMove" src="img/cards/hand-shadow.svg" alt="Shadow Hand Lucky">
+                                        <img class="hoverAppear shrinkMove" src="img/cards/hand-shadow-hover.svg" alt="Shadow Hand Lucky">
+                                    </div>
+
+                                    <img class="innerImg upMove" src="img/cards/hand-yes.svg" alt="Si">
+                                </div>
+                                
+
+                                <div class="cardName">
+                                    <h3>Si</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="noCards secondCards activeCardShadow">
+                            <div class="upMove">
+
+                                <div class="cardIcon">
+                                    <img class="cardDropShadow" src="img/cards/card-bg.png" alt="No">
+                                    <img class="hoverAppear" src="img/cards/card-bg-hover.png" alt="No">
+
+                                    <div class="cardShadow">
+                                        <img class="shrinkMove" src="img/cards/hand-shadow.svg" alt="Shadow Hand Lucky">
+                                        <img class="hoverAppear shrinkMove" src="img/cards/hand-shadow-hover.svg" alt="Shadow Hand Lucky">
+                                    </div>
+
+                                    <img class="innerImg upMove" src="img/cards/hand-no.svg" alt="No">
+                                </div>
+
+                                
+
+                                <div class="cardName">
+                                    <h3>No</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                <!-- THIRD QUESTION CLIENT / TALENT / COMPETITION  -->
+                <!-- 2 ANSWERS QUESTION -->
+                <div id="ThirdQuestion" class="questions2 currentPage waitingPage">
+                    <div class="questionTitle">
+                        <h2 id="thirdBlankQuestion"> </h2>
+                    </div>
+
+                    <div class="cardsWrapper">
+                        <div class="yesCards secondCards activeCardShadow">
+                            <div class="upMove">
+                                <div class="cardIcon">
+                                    <img class="cardDropShadow" src="img/cards/card-bg.png" alt="Yes">
+                                    <img class="hoverAppear" src="img/cards/card-bg-hover.png" alt="Yes">
+
+                                    <div class="cardShadow">
+                                        <img class="shrinkMove" src="img/cards/hand-shadow.svg" alt="Shadow Hand Lucky">
+                                        <img class="hoverAppear shrinkMove" src="img/cards/hand-shadow-hover.svg" alt="Shadow Hand Lucky">
+                                    </div>
+
+                                    <img class="innerImg upMove" src="img/cards/hand-yes.svg" alt="Si">
+                                </div>
+                                
+
+                                <div class="cardName">
+                                    <h3>Si</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="noCards secondCards activeCardShadow">
+                            <div class="upMove">
+
+                                <div class="cardIcon">
+                                    <img class="cardDropShadow" src="img/cards/card-bg.png" alt="No">
+                                    <img class="hoverAppear" src="img/cards/card-bg-hover.png" alt="No">
+
+                                    <div class="cardShadow">
+                                        <img class="shrinkMove" src="img/cards/hand-shadow.svg" alt="Shadow Hand Lucky">
+                                        <img class="hoverAppear shrinkMove" src="img/cards/hand-shadow-hover.svg" alt="Shadow Hand Lucky">
+                                    </div>
+
+                                    <img class="innerImg upMove" src="img/cards/hand-no.svg" alt="No">
+                                </div>
+
+                                
+
+                                <div class="cardName">
+                                    <h3>No</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
 
                 <!-- AGENCIES ADVICE SCREEN -->
-                <!-- <div id="advice1" class="advicePages waitingPage">
+                <div id="advice1" class="advicePages currentPage ">
                     <div class="questionTitle">
                         <h2>Apreciamos el talento pero nos gusta más el hambre de ser, en Lucky más que books buscamos ganas de trascender, las siguientes agencias buscan solo talento:</h2>
                     </div>
@@ -304,17 +424,20 @@
                                     
                                 </div>
 
-                                <div class="agencyAdvice longAdvice">
-                                    <h3>J. Walter Thompson</h3>
-                                    <div class="underlineWrap">
-                                        <div class="underLine"></div>
-                                    </div>
+                                <div class="insertAgencyName1">
+                                    <div class="agencyAdvice shortAdvice">
+                                        <h3>Mischtech</h3>
+                                        <div class="underlineWrap">
+                                            <div class="underLine"></div>
+                                        </div>
 
+                                    </div>
                                 </div>
 
                             </div>
 
-                            <div class="agencyData crystal">
+                            <div class="insertAgencyData1 agencyData">
+                                <p> Mischtech <br> Edgardo López <br> CEO <br> <a href="mailto:edgardo@mishtech.com">edgardo@mishtech.com</a> </p>
                             </div>
                         </div>
 
@@ -332,17 +455,20 @@
                                     
                                 </div>
 
-                                <div class="agencyAdvice shortAdvice">
-                                    <h3>CeroCuatro</h3>
-                                    <div class="underlineWrap">
-                                        <div class="underLine"></div>
+                                <div class="insertAgencyName2">
+                                    <div class="agencyAdvice shortAdvice">
+                                        <h3>BBDO</h3>
+                                        <div class="underlineWrap">
+                                            <div class="underLine"></div>
+                                        </div>
                                     </div>
                                 </div>
                                 
 
                             </div>
 
-                            <div class="agencyData crystal">
+                            <div class="insertAgencyData2 agencyData">
+                                <p> BBDO <br> Carlos Vaca <br> CEO </p>
                             </div>
                         </div>
 
@@ -360,10 +486,12 @@
                                     
                                 </div>
                                 
-                                <div class="agencyAdvice shortAdvice">
-                                    <h3>Brandcorp</h3>
-                                    <div class="underlineWrap">
-                                        <div class="underLine"></div>
+                                <div class="insertAgencyName3">
+                                    <div class="agencyAdvice shortAdvice">
+                                        <h3>Terán/TBWA</h3>
+                                        <div class="underlineWrap">
+                                            <div class="underLine"></div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -371,7 +499,8 @@
 
                             </div>
 
-                            <div class="agencyData crystal">
+                            <div class="insertAgencyData3 agencyData">
+                                <p> Terán/TBWA <br> José Alberto Terán <br> CEO <br> </p>
                             </div>
                         </div>
                     </div>
@@ -380,10 +509,10 @@
                         <p class="continueCopy">Descubre nuestro speech.</p>
                         <img src="img/icons/back-lucky.png" alt="Keep Going">
                     </div>
-                </div> -->
+                </div>
 
                 <!-- WRONG ANSWER -->
-                <!-- <div id="wrongAnswer" class="waitingPage">
+                <div id="wrongAnswer" class="currentPage waitingPage">
                     <div class="questionTitle">
                         <h2>No somos nosotros, <br>
                             eres tú</h2>
@@ -412,10 +541,10 @@
                         </div>
                         
                     </div>
-                </div> -->
+                </div>
 
                 <!-- VISIT LUCKY PORTFOLIO -->
-                <!-- <div id="goLuckyPortfolio" class="waitingPage">
+                <div id="goLuckyPortfolio" class="currentPage waitingPage">
                     <div class="questionTitle">
                         <h2>
                             Entonces ¿Qué haces aquí?
@@ -438,10 +567,10 @@
                         </div>
                         
                     </div>
-                </div> -->
+                </div>
 
                 <!-- FLY WITH US PORTFOLIO -->
-                <!-- <div id="flyWithUs" class="waitingPage">
+                <div id="flyWithUs" class="currentPage waitingPage">
                     <div class="questionTitle">
                         <h2>
                             ¿Tienes ganas de volar?
@@ -464,10 +593,10 @@
                         </div>
                         
                     </div>
-                </div> -->
+                </div>
 
                 <!-- EMBED STREAMING -->
-                <!-- <div id="embedStreaming" class="fullEmbedWrapper">
+                <div id="embedStreaming" class="fullEmbedWrapper waitingPage">
                     <div class="embedWrapper">
                         <iframe src="" frameborder="0"></iframe>
                     </div>
@@ -491,10 +620,10 @@
                     <div class="embedLogoWrapper">
                         <img src="img/lucky-logo.svg" alt="Lucky Ideas">
                     </div>  
-                </div> -->
+                </div>
 
                 <!-- DOBLADA O SUBTITULADA SCREEN -->
-                <!-- <div id="dob/sub" class="langPages waitingPage">
+                <div id="dob/sub" class="langPages currentPage waitingPage">
                     
                     <div class="cardsWrapper">
                         <div id="dobladaCard" class="langCards activeCardShadow">
@@ -553,10 +682,10 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- EMBED VIDEO -->
-                <!-- <div id="embedVideo" class="fullEmbedWrapper">
+                <div id="embedVideo" class="fullEmbedWrapper waitingPage">
                     <div class="embedWrapper">
                         <iframe src="" frameborder="0"></iframe>
                     </div>
@@ -580,7 +709,7 @@
                     <div class="embedLogoWrapper">
                         <img src="img/lucky-logo.svg" alt="Lucky Ideas">
                     </div>
-                </div> -->
+                </div>
 
                 <!-- EMBED CONTACT INFO -->
                 <div id="contactWrapper">
@@ -610,7 +739,7 @@
                 </div>
 
                 <!-- TALENT GIFT CODE SCREEN -->
-                <!-- <div id="giftCode" class="advicePages waitingPage">
+                <div id="giftCode" class="advicePages currentPage waitingPage">
                     <div class="questionTitle">
                         <h2>Trae este código y caele a cotorrear un viernes.</h2>
                         <h3>(Nos reservamos el derecho de abrirte).</h3>
@@ -632,7 +761,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 
             </div>
         </div>

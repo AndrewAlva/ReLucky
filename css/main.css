@@ -182,16 +182,7 @@ body{
     }
 
     .waitingPage{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        /*bottom: 100%;*/
-
-        -webkit-transition: all .8s ease-in-out;
-           -moz-transition: all .8s ease-in-out;
-            -ms-transition: all .8s ease-in-out;
-             -o-transition: all .8s ease-in-out;
-                transition: all .8s ease-in-out;
+        bottom: 100% !important;
     }
 /*////////////////////////////// END WRAPPERS STYLING //////////////////////////////*/
 
@@ -304,7 +295,8 @@ body{
     .questionTitle h2{
         position: absolute;
         left: 0; right: 0;
-        margin: 40px 0;padding: 0;
+        margin: 35px 0;
+        padding: 0;
         line-height: 30px;
         text-align: center;
         font-size: 30px;
@@ -317,7 +309,7 @@ body{
         background-repeat: no-repeat;
     }
 
-    #questions2 .questionTitle{
+    .questions2 .questionTitle{
         width: 750px;
         height: 155px;
         top: 30px;
@@ -327,8 +319,8 @@ body{
         background-repeat: no-repeat;
     }
 
-    #questions2 .questionTitle h2{
-        padding: 0 150px;
+    .questions2 .questionTitle h2{
+        padding: 0 160px;
         font-size: 24px;
     }
 
@@ -889,6 +881,7 @@ body{
         width: 100%;
         height: 100%;
         left: 0;
+        bottom: 0;
         -webkit-transition: all 1s cubic-bezier(.76,-0.3,.21,1.3);
            -moz-transition: all 1s cubic-bezier(.76,-0.3,.21,1.3);
             -ms-transition: all 1s cubic-bezier(.76,-0.3,.21,1.3);
@@ -1188,9 +1181,6 @@ body{
             
         }
     /*///// END BIG DESKTOP STYLING /////*/
-
-    
-    
 /*/////////////////////////// END RESPONSIVE STYLING /////////////////////////////////////*/
 
 
