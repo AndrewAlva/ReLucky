@@ -291,7 +291,6 @@ body{
     #startWeb{
         width: 46px;
     }
-
 /*////////////////////////////// END INTRO ANIMATION //////////////////////////////*/
 
 
@@ -352,14 +351,26 @@ body{
         margin: 55px 0;
     }
 
-    .clientQ1{
+
+
+    .clientQ0{
         margin: 30px 0;
+    }
+    .clientA0{
+        margin: 45px 0;
+    }
+    .clientC0{
+        width: 220px;
+    }
+
+    .clientQ1{
+        margin: 40px 0;
     }
     .clientA1{
         margin: 45px 0;
     }
     .clientC1{
-        width: 220px;
+        width: 255px;
     }
 
     .clientQ2{
@@ -369,39 +380,30 @@ body{
         margin: 45px 0;
     }
     .clientC2{
-        width: 255px;
-    }
-
-    .clientQ3{
-        margin: 40px 0;
-    }
-    .clientA3{
-        margin: 45px 0;
-    }
-    .clientC3{
         width: 335px;
     }
 
+    .clientQ3{
+        margin: 45px 0;
+    }
+    .clientA3{
+        margin: 40px 0;
+    }
+    .clientC3{
+        width: 400px;
+    }
 
     .clientQ4{
         margin: 45px 0;
     }
     .clientA4{
-        margin: 40px 0;
+        margin: 45px 0;
     }
     .clientC4{
-        width: 400px;
-    }
-
-    .clientQ5{
-        margin: 45px 0;
-    }
-    .clientA5{
-        margin: 45px 0;
-    }
-    .clientC5{
         width: 230px;
     }
+
+
 
     #wrongAnswer .questionTitle{
         background-image: url('../img/cards/cloud-sm.svg');

@@ -54,9 +54,6 @@ jQuery(document).ready(function($) {
 		console.log("Selected as Talent Question 1: " + selectedTalentQA1);
 		console.log("Selected as Talent Question 2: " + selectedTalentQA2);
 		console.log("Selected as Talent Question 3: " + selectedTalentQA3);
-
-
-
 	// END RANDOM SHUFFLE
 
 	// QUESTION PACKS
@@ -291,42 +288,42 @@ jQuery(document).ready(function($) {
 			},1000);
 		});
 
-		// INTRO QUESTIONS
+		//////////////////////////////// INTRO QUESTIONS ////////////////////////////////
 
 		// CLIENT CARD WORKFLOW
 			$('#cardCliente').click(function(){
 				$('#firstBlankQuestion').append(questionsClient[selectedClientQA1]);
-				$('#firstBlankQuestion').addClass('bigQuestion');
+				$('#firstBlankQuestion').addClass('clientQ' + selectedClientQA1);
 
 				$('#firstBlankAnswer').append(answersClient[selectedClientQA1]);
-				$('#firstBlankAnswer').addClass('mediumQuestion');
+				$('#firstBlankAnswer').addClass('clientA' + selectedClientQA1);
 
-				$('#firstAdviceClick').addClass('lgFooter');
 				$('#firstBlankCopy').append(copiesClient[selectedClientQA1]);
+				$('#firstAdviceClick').addClass('clientC' + selectedClientQA1);
 
 
 
 
 				$('#secondBlankQuestion').append(questionsClient[selectedClientQA2]);
-				$('#secondBlankQuestion').addClass('bigQuestion');
+				$('#secondBlankQuestion').addClass('clientQ' + selectedClientQA2);
 
 				$('#secondBlankAnswer').append(answersClient[selectedClientQA2]);
-				$('#secondBlankAnswer').addClass('mediumQuestion');
+				$('#secondBlankAnswer').addClass('clientA' + selectedClientQA2);
 
-				$('#secondAdviceClick').addClass('lgFooter');
 				$('#secondBlankCopy').append(copiesClient[selectedClientQA2]);
+				$('#secondAdviceClick').addClass('clientC' + selectedClientQA2);
 
 
 
 
 				$('#thirdBlankQuestion').append(questionsClient[selectedClientQA3]);
-				$('#thirdBlankQuestion').addClass('bigQuestion');
+				$('#thirdBlankQuestion').addClass('clientQ' + selectedClientQA3);
 
 				$('#thirdBlankAnswer').append(answersClient[selectedClientQA3]);
-				$('#thirdBlankAnswer').addClass('mediumQuestion');
+				$('#thirdBlankAnswer').addClass('clientA' + selectedClientQA3);
 
-				$('#thirdAdviceClick').addClass('lgFooter');
 				$('#thirdBlankCopy').append(copiesClient[selectedClientQA3]);
+				$('#thirdAdviceClick').addClass('clientC' + selectedClientQA3);
 
 
 				$('#questions3').addClass('passedPage');
@@ -539,9 +536,6 @@ jQuery(document).ready(function($) {
 			$('#advice3').addClass('passedPage');
 			// if
 		});
-
-		
-
 	// END WORKFLOW PAGE
 
 
