@@ -184,6 +184,10 @@ body{
     .waitingPage{
         bottom: 100% !important;
     }
+
+    .passedPage{
+        bottom: -100% !important;
+    }
 /*////////////////////////////// END WRAPPERS STYLING //////////////////////////////*/
 
 /*////////////////////////////// BACKGROUND ANIMATIONS //////////////////////////////*/
@@ -259,22 +263,35 @@ body{
         position: absolute;
         width: 100%;
         height: 100%;
-        overflow: hidden;
     }
 
-    .frameHold img{
+    #fakeIntro{
         position: absolute;
-        width: 70%;
-        height: auto;
+        width: 1280px;
+        height: 720px;
         margin: auto;
-        top: 0; bottom: 0; left: 0; right: 0;
+        top: 0; right: 0; left: 0; bottom: 0;
     }
 
-    .frameHold{
+    #fakeIntro img{
+        width: 100%;
+    }
+
+    #animationHolder iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    #vimeoProtection{
         position: absolute;
         width: 100%;
         height: 100%;
     }
+
+    #startWeb{
+        width: 46px;
+    }
+
 /*////////////////////////////// END INTRO ANIMATION //////////////////////////////*/
 
 
@@ -295,7 +312,6 @@ body{
     .questionTitle h2{
         position: absolute;
         left: 0; right: 0;
-        margin: 35px 0;
         padding: 0;
         line-height: 30px;
         text-align: center;
@@ -324,6 +340,69 @@ body{
         font-size: 24px;
     }
 
+    .bigQuestion{
+        margin: 35px 0;
+    }
+
+    .mediumQuestion{
+        margin: 45px 0;
+    }
+
+    .smallQuestion{
+        margin: 55px 0;
+    }
+
+    .clientQ1{
+        margin: 30px 0;
+    }
+    .clientA1{
+        margin: 45px 0;
+    }
+    .clientC1{
+        width: 220px;
+    }
+
+    .clientQ2{
+        margin: 40px 0;
+    }
+    .clientA2{
+        margin: 45px 0;
+    }
+    .clientC2{
+        width: 255px;
+    }
+
+    .clientQ3{
+        margin: 40px 0;
+    }
+    .clientA3{
+        margin: 45px 0;
+    }
+    .clientC3{
+        width: 335px;
+    }
+
+
+    .clientQ4{
+        margin: 45px 0;
+    }
+    .clientA4{
+        margin: 40px 0;
+    }
+    .clientC4{
+        width: 400px;
+    }
+
+    .clientQ5{
+        margin: 45px 0;
+    }
+    .clientA5{
+        margin: 45px 0;
+    }
+    .clientC5{
+        width: 230px;
+    }
+
     #wrongAnswer .questionTitle{
         background-image: url('../img/cards/cloud-sm.svg');
         -webkit-background-size: 100%;
@@ -336,7 +415,7 @@ body{
         margin: 30px 0;
     }
 
-    #advice1 .questionTitle{
+    .advicePages .questionTitle{
         background-image: url('../img/cards/cloud-lg.svg');
         -webkit-background-size: 100%;
         background-size: 100%;
@@ -345,7 +424,7 @@ body{
         height: 154px !important;
     }
 
-    #advice1 h2{
+    .advicePages h2{
         font-size: 22px !important;
         padding-left: 70px;
         padding-right: 70px;
@@ -404,6 +483,16 @@ body{
         margin: auto;
         left: 0; right: 0;
         top: 15%;
+
+        -webkit-transition: all .7s ease-in-out;
+           -moz-transition: all .7s ease-in-out;
+            -ms-transition: all .7s ease-in-out;
+             -o-transition: all .7s ease-in-out;
+                transition: all .7s ease-in-out;
+    }
+
+    .compactCardsWrapper{
+        width: 230px;
     }
 
     /*////////////////////////////// THIRD CARDS STYLING //////////////////////////////*/
@@ -412,26 +501,28 @@ body{
             margin: auto;
             width: 230px;
             height: 100%;
+            left: 0; right: 0;
+            bottom: 0;
             cursor: pointer;
-            -webkit-transition: all .2s ease-in-out;
-               -moz-transition: all .2s ease-in-out;
-                -ms-transition: all .2s ease-in-out;
-                 -o-transition: all .2s ease-in-out;
-                    transition: all .2s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+               -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                 -o-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
         }
 
-        .thirdCards:first-child{
+        .leftThirdCard{
             left: 0;
             right: 60%;
             bottom: -30px;
             transform: rotate(-3deg);
         }
 
-        .thirdCards:nth-child(2){
+        .centerThirdCard{
             left: 0; right: 0;
         }
 
-        .thirdCards:nth-child(3){
+        .rightThirdCard{
             left: 60%;
             right: 0;
             bottom: -30px;
@@ -664,12 +755,27 @@ body{
         .continueFooter{
             position: absolute;
             bottom: 0;
-            width: 220px;
             height: 50px;
             margin: auto;
             right: 0; left: 0;
             color: #edf1fa;
             cursor: pointer;
+        }
+
+        .xsFooter{
+            width: 120px;
+        }
+
+        .smFooter{
+            width: 220px;
+        }
+
+        .mdFooter{
+            width: 320px;
+        }
+
+        .lgFooter{
+            width: 420px;
         }
 
         .continueFooter p, .continueFooter img{
@@ -679,11 +785,11 @@ body{
         .continueFooter img{
             width: 30px;
             margin-left: 5px;
-            -webkit-transform: rotate(180deg) !important;
-               -moz-transform: rotate(180deg) !important;
-                -ms-transform: rotate(180deg) !important;
-                 -o-transform: rotate(180deg) !important;
-                    transform: rotate(180deg) !important;
+            -webkit-transform: rotate(180deg);
+               -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                 -o-transform: rotate(180deg);
+                    transform: rotate(180deg);
         }
 
         .continueFooter:hover{
@@ -1122,8 +1228,6 @@ body{
     /*//////// END PUSH STARS BG INTERACTION ////////////*/
 
     /*//////// ADVICE CARDS INTERACTION ////////////*/
-
-
         .adviceCardSelected{
             left: 0 !important;
             right: 0 !important;
