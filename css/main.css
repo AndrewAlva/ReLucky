@@ -405,6 +405,45 @@ body{
 
 
 
+
+    .firstTalentQuestion{
+        top: -15px;
+    }
+
+    .talentQ0{
+        margin: 55px 0; /*checked*/
+    }
+    .talentA0{
+        margin: 45px 0;
+    }
+
+    .talentQ1{
+        margin: 55px 0; /*checked*/
+    }
+    .talentA1{
+        margin: 45px 0;
+    }
+
+    .talentQ2{
+        margin: 55px 0; /*checked*/
+    }
+    .talentA2{
+        margin: 45px 0;
+    }
+
+    .talentQ3{
+        margin: 45px 0; /*checked*/
+    }
+    .talentA3{
+        margin: 40px 0;
+    }
+
+    .talentC{
+        width: 120px;
+    }
+
+
+
     #wrongAnswer .questionTitle{
         background-image: url('../img/cards/cloud-sm.svg');
         -webkit-background-size: 100%;
@@ -452,6 +491,10 @@ body{
         background-repeat: no-repeat;
     }
 
+    #flyWithUs .questionTitle h2{
+        margin: 40px 0;
+    }
+
     #giftCode .questionTitle{
         background-image: url('../img/cards/cloud-lg.svg');
         -webkit-background-size: 100%;
@@ -475,6 +518,10 @@ body{
         text-align: center;
         top: 30px;
     }
+
+    #bringGiftCode{
+        width: 155px;
+    }
 /*////////////////////////////// END QUESTIONS STYLING //////////////////////////////*/
 
 /*////////////////////////////// CARDS STYLING //////////////////////////////*/
@@ -486,11 +533,11 @@ body{
         left: 0; right: 0;
         top: 15%;
 
-        -webkit-transition: all .7s ease-in-out;
-           -moz-transition: all .7s ease-in-out;
-            -ms-transition: all .7s ease-in-out;
-             -o-transition: all .7s ease-in-out;
-                transition: all .7s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+           -moz-transition: all .5s ease-in-out;
+            -ms-transition: all .5s ease-in-out;
+             -o-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
     }
 
     .compactCardsWrapper{
@@ -764,23 +811,19 @@ body{
             cursor: pointer;
         }
 
-        .xsFooter{
-            width: 120px;
+        .continueHeader{
+            position: absolute;
+            top: 0;
+            height: 50px;
+            margin: auto; 
+            left: 0;
+            right: 0;
+            color: #edf1fa;
+            cursor: pointer;
         }
 
-        .smFooter{
-            width: 220px;
-        }
 
-        .mdFooter{
-            width: 320px;
-        }
-
-        .lgFooter{
-            width: 420px;
-        }
-
-        .continueFooter p, .continueFooter img{
+        .continueFooter p, .continueFooter img, .continueHeader p, .continueHeader img{
             display: inline-block;
         }
 
@@ -795,6 +838,24 @@ body{
         }
 
         .continueFooter:hover{
+            -webkit-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+               -moz-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+                -ms-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+                 -o-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+                    animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
+        }
+
+        .continueHeader img{
+            width: 30px;
+            margin-left: 5px;
+            -webkit-transform: rotate(90deg);
+               -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                 -o-transform: rotate(90deg);
+                    transform: rotate(90deg);
+        }
+
+        .continueHeader:hover{
             -webkit-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
                -moz-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
                 -ms-animation: keepGoing 1.4s cubic-bezier(.76,0,.21,1) infinite !important;
@@ -1015,6 +1076,11 @@ body{
     .embedWrapper:hover{
         bottom: 10px;
         box-shadow: 20px 30px 20px #00131d;
+    }
+
+    .embedWrapper img{
+        position: absolute;
+        left: 0;
     }
 
     .embedNavWrapper{

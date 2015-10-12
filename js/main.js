@@ -193,76 +193,96 @@ jQuery(document).ready(function($) {
 			
 
 			// ESFERA AGENCY
-			agenciesName1 = '<div class="agencyAdvice shortAdvice"> <h3>Esfera</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
-			agenciesData1 = '<p> Esfera Comunicación <br> Luis Alberto Purata García <br> Director Asociado <br> <a href="mailto:luis.purata@esfera.cc">luis.purata@esfera.cc</a></p>';
+			agencyName1 = '<div class="agencyAdvice shortAdvice"> <h3>Esfera</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
+			agencyData1 = '<p> Esfera Comunicación <br> Luis Alberto Purata García <br> Director Asociado <br> <a href="mailto:luis.purata@esfera.cc">luis.purata@esfera.cc</a></p>';
 
 			// CEROCUATRO AGENCY
-			agenciesName2 = '<div class="agencyAdvice shortAdvice"> <h3>Cerocuatro</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
-			agenciesData2 = '<p> Cero Cuatro <br> Rodrigo Noriega <br> Director General <br> <a href="mailto:rodrigo.noriega@cerocuatro.com">rodrigo.noriega@cerocuatro.com</a></p>';
+			agencyName2 = '<div class="agencyAdvice shortAdvice"> <h3>Cerocuatro</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
+			agencyData2 = '<p> Cero Cuatro <br> Rodrigo Noriega <br> Director General <br> <a href="mailto:rodrigo.noriega@cerocuatro.com">rodrigo.noriega@cerocuatro.com</a></p>';
 
 			// BRANDCORP AGENCY
-			agenciesName3 = '<div class="agencyAdvice shortAdvice"> <h3>Brandcorp</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
-			agenciesData3 = '<p> Brandcorp <br> Juan de Dios Mayorquín <br> CEO <br> <a href="mailto:juand@brandcorp.com.mx">juand@brandcorp.com.mx</a></p>';
+			agencyName3 = '<div class="agencyAdvice shortAdvice"> <h3>Brandcorp</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
+			agencyData3 = '<p> Brandcorp <br> Juan de Dios Mayorquín <br> CEO <br> <a href="mailto:juand@brandcorp.com.mx">juand@brandcorp.com.mx</a></p>';
 
 			// VÉRTICE AGENCY
-			agenciesName4 = '<div class="agencyAdvice shortAdvice"> <h3>Vértice</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
-			agenciesData4 = '<p> Vértice <br> Javier Álvarez <br> Director General <br> <a href="mailto:javier.alvarez@verticecom.com">javier.alvarez@verticecom.com</a></p>';
+			agencyName4 = '<div class="agencyAdvice shortAdvice"> <h3>Vértice</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
+			agencyData4 = '<p> Vértice <br> Javier Álvarez <br> Director General <br> <a href="mailto:javier.alvarez@verticecom.com">javier.alvarez@verticecom.com</a></p>';
 
 			// ALQUIMIA AGENCY
-			agenciesName5 = '<div class="agencyAdvice shortAdvice"> <h3>Alquimia</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
-			agenciesData5 = '<p> Alquimia <br> Alejandro Rodríguez <br> Director General <br> <a href="mailto:alvidrez@alquimiag.com">alvidrez@alquimiag.com</a></p>';
+			agencyName5 = '<div class="agencyAdvice shortAdvice"> <h3>Alquimia</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
+			agencyData5 = '<p> Alquimia <br> Alejandro Rodríguez <br> Director General <br> <a href="mailto:alvidrez@alquimiag.com">alvidrez@alquimiag.com</a></p>';
 
 			// KP AGENCY
-			agenciesName6 = '<div class="agencyAdvice shortAdvice"> <h3>KP</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
-			agenciesData6 = '<p> KP <br> Hugo Pulido <br> Fundador <br> <a href="mailto:pulido@kp.com.mx">pulido@kp.com.mx</a></p>';
+			agencyName6 = '<div class="agencyAdvice shortAdvice"> <h3>KP</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
+			agencyData6 = '<p> KP <br> Hugo Pulido <br> Fundador <br> <a href="mailto:pulido@kp.com.mx">pulido@kp.com.mx</a></p>';
 
 			// LEO BURNETT AGENCY
-			agenciesName7 = '<div class="agencyAdvice shortAdvice"> <h3>Leo Burnett</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
-			agenciesData7 = '<p> Leo Burnett <br> Pablo de Arteaga <br> CEO <br> <a href="http://www.leoburnett.com/" target="_blank">http://www.leoburnett.com/</a></p>';
+			agencyName7 = '<div class="agencyAdvice shortAdvice"> <h3>Leo Burnett</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
+			agencyData7 = '<p> Leo Burnett <br> Pablo de Arteaga <br> CEO <br> <a href="http://www.leoburnett.com/" target="_blank">http://www.leoburnett.com/</a></p>';
 
 			// J. WALTER THOMPSON AGENCY
-			agenciesName8 = '<div class="agencyAdvice longAdvice"> <h3>J. Walter Thompson</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
-			agenciesData8 = '<p> J. Walter Thompson <br> Mariate Arnal <br> CEO <br> <a href="https://www.jwt.com/mexicocity/" target="_blank">https://www.jwt.com/mexicocity/</a></p>';
+			agencyName8 = '<div class="agencyAdvice longAdvice"> <h3>J. Walter Thompson</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
+			agencyData8 = '<p> J. Walter Thompson <br> Mariate Arnal <br> CEO <br> <a href="https://www.jwt.com/mexicocity/" target="_blank">https://www.jwt.com/mexicocity/</a></p>';
 
 			// YOUNG & RUBICAM AGENCY
-			agenciesName9 = '<div class="agencyAdvice longAdvice"> <h3>Young & Rubicam</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
-			agenciesData9 = '<p> Young & Rubicam <br> Juan Bonilla <br> Presidente <br> <a href="http://www.yr.com.mx/" target="_blank">http://www.yr.com.mx/</a></p>';
+			agencyName9 = '<div class="agencyAdvice longAdvice"> <h3>Young & Rubicam</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
+			agencyData9 = '<p> Young & Rubicam <br> Juan Bonilla <br> Presidente <br> <a href="http://www.yr.com.mx/" target="_blank">http://www.yr.com.mx/</a></p>';
 
 			// ANÓNIMO AGENCY
-			agenciesName10 = '<div class="agencyAdvice shortAdvice"> <h3>Anónimo</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
-			agenciesData10 = '<p> Anónimo <br> Raúl Cardos <br> Fundador <br> <a href="mailto:raul@anonimo.mx">raul@anonimo.mx</a></p>';
+			agencyName10 = '<div class="agencyAdvice shortAdvice"> <h3>Anónimo</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
+			agencyData10 = '<p> Anónimo <br> Raúl Cardos <br> Fundador <br> <a href="mailto:raul@anonimo.mx">raul@anonimo.mx</a></p>';
 
 			// FLOCK AGENCY
-			agenciesName11 = '<div class="agencyAdvice shortAdvice"> <h3>Flock</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
-			agenciesData11 = '<p> Flock <br> Sebastian Tonda <br> CEO </p>';
+			agencyName11 = '<div class="agencyAdvice shortAdvice"> <h3>Flock</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
+			agencyData11 = '<p> Flock <br> Sebastian Tonda <br> CEO </p>';
 
 			// GRUPO W AGENCY
-			agenciesName12 = '<div class="agencyAdvice shortAdvice"> <h3>Grupo W</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
-			agenciesData12 = '<p> Grupo W <br> Ulises Valencia <br> Director <br> <a href="mailto:uvalencia@grupow.com">uvalencia@grupow.com</a></p>';
+			agencyName12 = '<div class="agencyAdvice shortAdvice"> <h3>Grupo W</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
+			agencyData12 = '<p> Grupo W <br> Ulises Valencia <br> Director <br> <a href="mailto:uvalencia@grupow.com">uvalencia@grupow.com</a></p>';
 
 			// DDB AGENCY
-			agenciesName13 = '<div class="agencyAdvice shortAdvice"> <h3>DDB</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
-			agenciesData13 = '<p> DDB <br> Matías del Campo <br> CEO <br> </p>';
+			agencyName13 = '<div class="agencyAdvice shortAdvice"> <h3>DDB</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
+			agencyData13 = '<p> DDB <br> Matías del Campo <br> CEO <br> </p>';
 
 			// BBDO AGENCY
-			agenciesName14 = '<div class="agencyAdvice shortAdvice"> <h3>BBDO</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
-			agenciesData14 = '<p> BBDO <br> Carlos Vaca <br> CEO </p>';
+			agencyName14 = '<div class="agencyAdvice shortAdvice"> <h3>BBDO</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
+			agencyData14 = '<p> BBDO <br> Carlos Vaca <br> CEO </p>';
 
 			// TERÁN/TBWA AGENCY
-			agenciesName15 = '<div class="agencyAdvice shortAdvice"> <h3>Terán/TBWA</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
-			agenciesData15 = '<p> Terán/TBWA <br> José Alberto Terán <br> CEO <br> </p>';
+			agencyName15 = '<div class="agencyAdvice shortAdvice"> <h3>Terán/TBWA</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>'; 
+			agencyData15 = '<p> Terán/TBWA <br> José Alberto Terán <br> CEO <br> </p>';
 
 			// MISCHTECH AGENCY
-			agenciesName16 = '<div class="agencyAdvice shortAdvice"> <h3>Mischtech</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
-			agenciesData16 = '<p> Mischtech <br> Edgardo López <br> CEO <br> <a href="mailto:edgardo@mishtech.com">edgardo@mishtech.com</a> </p>';	
+			agencyName16 = '<div class="agencyAdvice shortAdvice"> <h3>Mischtech</h3> <div class="underlineWrap"> <div class="underLine"></div> </div> </div>';
+			agencyData16 = '<p> Mischtech <br> Edgardo López <br> CEO <br> <a href="mailto:edgardo@mishtech.com">edgardo@mishtech.com</a> </p>';	
 
 			
 
 			// INSERT AGENCIES NAMES AND DATA
-				var agenciesName = [agencyName1,agencyName2,agencyName3,agencyName4,agencyName5,agencyName6,agencyName7,agencyName8,agencyName9,agencyName10,agencyName11,agencyNam12,agencyName13,agencyName14,agencyName15,agencyName16];
+				var agenciesName = [agencyName1,agencyName2,agencyName3,agencyName4,agencyName5,agencyName6,agencyName7,agencyName8,agencyName9,agencyName10,agencyName11,agencyName12,agencyName13,agencyName14,agencyName15,agencyName16];
 
 				var agenciesData = [agencyData1,agencyData2,agencyData3,agencyData4,agencyData5,agencyData6,agencyData7,agencyData8,agencyData9,agencyData10,agencyData11,agencyData12,agencyData13,agencyData14,agencyData15,agencyData16];
 			// END INSERT AGENCIES NAMES AND DATA
+
+				var leftClientAgenciesNames = [agenciesName[0], agenciesName[3], agenciesName[6], agenciesName[9], agenciesName[12]];
+				var centerClientAgenciesNames = [agenciesName[1], agenciesName[4], agenciesName[7], agenciesName[10], agenciesName[13]];
+				var rightClientAgenciesNames = [agenciesName[2], agenciesName[5], agenciesName[8], agenciesName[11], agenciesName[14]];
+
+				var leftClientAgenciesData = [agenciesData[0], agenciesData[3], agenciesData[6], agenciesData[9], agenciesData[12]];
+				var centerClientAgenciesData = [agenciesData[1], agenciesData[4], agenciesData[7], agenciesData[10], agenciesData[13]];
+				var rightClientAgenciesData = [agenciesData[2], agenciesData[5], agenciesData[8], agenciesData[11], agenciesData[14]];
+
+
+
+				var leftTalentAgenciesNames = [agenciesName[13], agenciesName[2], agenciesName[4], agenciesName[15]];
+				var centerTalentAgenciesNames = [agenciesName[4], agenciesName[1], agenciesName[5], agenciesName[2]];
+				var rightTalentAgenciesNames = [agenciesName[1], agenciesName[0], agenciesName[3], agenciesName[3]];
+
+				var leftTalentAgenciesData = [agenciesData[13], agenciesData[2], agenciesData[4], agenciesData[15]];
+				var centerTalentAgenciesData = [agenciesData[4], agenciesData[1], agenciesData[5], agenciesData[2]];
+				var rightTalentAgenciesData = [agenciesData[1], agenciesData[0], agenciesData[3], agenciesData[3]];
+
+
 	// END AGENCIES PACKS
 
 
@@ -290,8 +310,12 @@ jQuery(document).ready(function($) {
 
 		//////////////////////////////// INTRO QUESTIONS ////////////////////////////////
 
+		var currentPath;
+		var youLose = false; 
 		// CLIENT CARD WORKFLOW
 			$('#cardCliente').click(function(){
+				currentPath = "client";
+
 				$('#firstBlankQuestion').append(questionsClient[selectedClientQA1]);
 				$('#firstBlankQuestion').addClass('clientQ' + selectedClientQA1);
 
@@ -300,6 +324,14 @@ jQuery(document).ready(function($) {
 
 				$('#firstBlankCopy').append(copiesClient[selectedClientQA1]);
 				$('#firstAdviceClick').addClass('clientC' + selectedClientQA1);
+
+				$('#firstInsertAgencyName1').append(leftClientAgenciesNames[selectedClientQA1]);
+				$('#firstInsertAgencyName2').append(centerClientAgenciesNames[selectedClientQA1]);
+				$('#firstInsertAgencyName3').append(rightClientAgenciesNames[selectedClientQA1]);
+
+				$('#firstInsertAgencyData1').append(leftClientAgenciesData[selectedClientQA1]);
+				$('#firstInsertAgencyData2').append(centerClientAgenciesData[selectedClientQA1]);
+				$('#firstInsertAgencyData3').append(rightClientAgenciesData[selectedClientQA1]);
 
 
 
@@ -313,6 +345,14 @@ jQuery(document).ready(function($) {
 				$('#secondBlankCopy').append(copiesClient[selectedClientQA2]);
 				$('#secondAdviceClick').addClass('clientC' + selectedClientQA2);
 
+				$('#secondInsertAgencyName1').append(leftClientAgenciesNames[selectedClientQA2]);
+				$('#secondInsertAgencyName2').append(centerClientAgenciesNames[selectedClientQA2]);
+				$('#secondInsertAgencyName3').append(rightClientAgenciesNames[selectedClientQA2]);
+
+				$('#secondInsertAgencyData1').append(leftClientAgenciesData[selectedClientQA2]);
+				$('#secondInsertAgencyData2').append(centerClientAgenciesData[selectedClientQA2]);
+				$('#secondInsertAgencyData3').append(rightClientAgenciesData[selectedClientQA2]);
+
 
 
 
@@ -324,6 +364,14 @@ jQuery(document).ready(function($) {
 
 				$('#thirdBlankCopy').append(copiesClient[selectedClientQA3]);
 				$('#thirdAdviceClick').addClass('clientC' + selectedClientQA3);
+
+				$('#thirdInsertAgencyName1').append(leftClientAgenciesNames[selectedClientQA3]);
+				$('#thirdInsertAgencyName2').append(centerClientAgenciesNames[selectedClientQA3]);
+				$('#thirdInsertAgencyName3').append(rightClientAgenciesNames[selectedClientQA3]);
+
+				$('#thirdInsertAgencyData1').append(leftClientAgenciesData[selectedClientQA3]);
+				$('#thirdInsertAgencyData2').append(centerClientAgenciesData[selectedClientQA3]);
+				$('#thirdInsertAgencyData3').append(rightClientAgenciesData[selectedClientQA3]);
 
 
 				$('#questions3').addClass('passedPage');
@@ -347,6 +395,10 @@ jQuery(document).ready(function($) {
 				$('.wrong1').click(function(){
 					$('#FirstQuestion').addClass('passedPage');
 					$('#advice1').removeClass('waitingPage');
+
+					if (youLose == false){
+						youLose = true;
+					}
 				});
 
 
@@ -367,6 +419,23 @@ jQuery(document).ready(function($) {
 				$('.wrong2').click(function(){
 					$('#SecondQuestion').addClass('passedPage');
 					$('#advice2').removeClass('waitingPage');
+
+					if (youLose == false){
+						youLose = true;
+					} else {
+						$('#SecondQuestion').addClass('crystal');
+						$('#ThirdQuestion').addClass('crystal');
+						$('#advice1').addClass('crystal');
+						$('#advice2').addClass('crystal');
+						$('#advice3').addClass('crystal');
+
+						x.append(h + ":" + m);
+						$('#wrongAnswer').removeClass('waitingPage');
+						setTimeout(function(){
+							alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
+							window.close();
+						},3000);
+					}
 				});
 
 
@@ -382,51 +451,101 @@ jQuery(document).ready(function($) {
 
 				$('.correct3').click(function(){
 					$('#ThirdQuestion').addClass('passedPage');
-					// $('#ThirdQuestion').removeClass('waitingPage');
+					$('#flyWithUs').removeClass('waitingPage');
 				});
 				$('.wrong3').click(function(){
 					$('#ThirdQuestion').addClass('passedPage');
 					$('#advice3').removeClass('waitingPage');
+
+					if (youLose == false){
+						youLose = true;
+					} else {
+						$('#SecondQuestion').addClass('crystal');
+						$('#ThirdQuestion').addClass('crystal');
+						$('#advice1').addClass('crystal');
+						$('#advice2').addClass('crystal');
+						$('#advice3').addClass('crystal');
+
+						x.append(h + ":" + m);
+						$('#wrongAnswer').removeClass('waitingPage');
+						setTimeout(function(){
+							alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
+							window.close();
+						},3000);
+					}
 				});
 			});
-
 		// END CLIENT CARD
+
+		// WANT TO FLY WITH US WORKFLOW
+			$('#cardFly').click(function(){
+				$('#flyWithUs').addClass('passedPage');
+				$('#embedStreaming').removeClass('waitingPage');
+			});
+		// END WANT TO FLY
 
 
 
 		// TALENT CARD WORKFLOW
 			$('#cardTalento').click(function(){
+				currentPath = "talent";
+
 				$('#firstBlankQuestion').append("Así que ¿Quieres trabajar con nosotros? <br>");
 				$('#firstBlankQuestion').append(questionsTalent[selectedTalentQA1]);
-				$('#firstBlankQuestion').addClass('bigQuestion');
+				$('#firstBlankQuestion').addClass('talentQ' + selectedTalentQA1);
+				$('#firstBlankQuestion').addClass('firstTalentQuestion');
 
 				$('#firstBlankAnswer').append(answersTalent[selectedTalentQA1]);
-				$('#firstBlankAnswer').addClass('mediumQuestion');
+				$('#firstBlankAnswer').addClass('talentA' + selectedTalentQA1);
+
+				$('#firstInsertAgencyName1').append(leftTalentAgenciesNames[selectedTalentQA1]);
+				$('#firstInsertAgencyName2').append(centerTalentAgenciesNames[selectedTalentQA1]);
+				$('#firstInsertAgencyName3').append(rightTalentAgenciesNames[selectedTalentQA1]);
+
+				$('#firstInsertAgencyData1').append(leftTalentAgenciesData[selectedTalentQA1]);
+				$('#firstInsertAgencyData2').append(centerTalentAgenciesData[selectedTalentQA1]);
+				$('#firstInsertAgencyData3').append(rightTalentAgenciesData[selectedTalentQA1]);
 
 
 
 				$('#secondBlankQuestion').append(questionsTalent[selectedTalentQA2]);
-				$('#secondBlankQuestion').addClass('bigQuestion');
+				$('#secondBlankQuestion').addClass('talentQ' + selectedTalentQA2);
 
 				$('#secondBlankAnswer').append(answersTalent[selectedTalentQA2]);
-				$('#secondBlankAnswer').addClass('mediumQuestion');
+				$('#secondBlankAnswer').addClass('talentA' + selectedTalentQA2);
+
+				$('#secondInsertAgencyName1').append(leftTalentAgenciesNames[selectedTalentQA2]);
+				$('#secondInsertAgencyName2').append(centerTalentAgenciesNames[selectedTalentQA2]);
+				$('#secondInsertAgencyName3').append(rightTalentAgenciesNames[selectedTalentQA2]);
+
+				$('#secondInsertAgencyData1').append(leftTalentAgenciesData[selectedTalentQA2]);
+				$('#secondInsertAgencyData2').append(centerTalentAgenciesData[selectedTalentQA2]);
+				$('#secondInsertAgencyData3').append(rightTalentAgenciesData[selectedTalentQA2]);
 
 
 
 				$('#thirdBlankQuestion').append(questionsTalent[selectedTalentQA3]);
-				$('#thirdBlankQuestion').addClass('bigQuestion');
+				$('#thirdBlankQuestion').addClass('talentQ' + selectedTalentQA3);
 
 				$('#thirdBlankAnswer').append(answersTalent[selectedTalentQA3]);
-				$('#thirdBlankAnswer').addClass('mediumQuestion');
+				$('#thirdBlankAnswer').addClass('talentA' + selectedTalentQA3);
+
+				$('#thirdInsertAgencyName1').append(leftTalentAgenciesNames[selectedTalentQA3]);
+				$('#thirdInsertAgencyName2').append(centerTalentAgenciesNames[selectedTalentQA3]);
+				$('#thirdInsertAgencyName3').append(rightTalentAgenciesNames[selectedTalentQA3]);
+
+				$('#thirdInsertAgencyData1').append(leftTalentAgenciesData[selectedTalentQA3]);
+				$('#thirdInsertAgencyData2').append(centerTalentAgenciesData[selectedTalentQA3]);
+				$('#thirdInsertAgencyData3').append(rightTalentAgenciesData[selectedTalentQA3]);
 
 
 
 
-				$('#firstAdviceClick').addClass('xsFooter');
+				$('#firstAdviceClick').addClass('talentC');
 				$('#firstBlankCopy').append(copyTalent);
-				$('#secondAdviceClick').addClass('xsFooter');
+				$('#secondAdviceClick').addClass('talentC');
 				$('#secondBlankCopy').append(copyTalent);
-				$('#thirdAdviceClick').addClass('xsFooter');
+				$('#thirdAdviceClick').addClass('talentC');
 				$('#thirdBlankCopy').append(copyTalent);
 
 				$('#questions3').addClass('passedPage');
@@ -434,7 +553,7 @@ jQuery(document).ready(function($) {
 				
 
 
-				if (selectedTalentQA1 == 3){
+				if (selectedTalentQA1 == 3 || selectedTalentQA1 == 0){
 
 					$('#firstYesCard').addClass('correct1');
 					$('#firstNoCard').addClass('wrong1');
@@ -450,11 +569,15 @@ jQuery(document).ready(function($) {
 				$('.wrong1').click(function(){
 					$('#FirstQuestion').addClass('passedPage');
 					$('#advice1').removeClass('waitingPage');
+
+					if (youLose == false){
+						youLose = true;
+					}
 				});
 
 
 
-				if (selectedTalentQA2 == 3){
+				if (selectedTalentQA2 == 3 || selectedTalentQA2 == 0){
 
 					$('#secondYesCard').addClass('correct2');
 					$('#secondNoCard').addClass('wrong2');
@@ -470,11 +593,27 @@ jQuery(document).ready(function($) {
 				$('.wrong2').click(function(){
 					$('#SecondQuestion').addClass('passedPage');
 					$('#advice2').removeClass('waitingPage');
+					if (youLose == false){
+						youLose = true;
+					} else {
+						$('#SecondQuestion').addClass('crystal');
+						$('#ThirdQuestion').addClass('crystal');
+						$('#advice1').addClass('crystal');
+						$('#advice2').addClass('crystal');
+						$('#advice3').addClass('crystal');
+
+						x.append(h + ":" + m);
+						$('#wrongAnswer').removeClass('waitingPage');
+						setTimeout(function(){
+							alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
+							window.close();
+						},3000);
+					}
 				});
 
 
 
-				if (selectedTalentQA3 == 3){
+				if (selectedTalentQA3 == 3 || selectedTalentQA3 == 0){
 
 					$('#thirdYesCard').addClass('correct3');
 					$('#thirdNoCard').addClass('wrong3');
@@ -485,57 +624,231 @@ jQuery(document).ready(function($) {
 
 				$('.correct3').click(function(){
 					$('#ThirdQuestion').addClass('passedPage');
-					// $('#ThirdQuestion').removeClass('waitingPage');
+					$('#dob-sub').removeClass('waitingPage');
 				});
 				$('.wrong3').click(function(){
 					$('#ThirdQuestion').addClass('passedPage');
 					$('#advice3').removeClass('waitingPage');
+
+					if (youLose == false){
+						youLose = true;
+					} else {
+						$('#SecondQuestion').addClass('crystal');
+						$('#ThirdQuestion').addClass('crystal');
+						$('#advice1').addClass('crystal');
+						$('#advice2').addClass('crystal');
+						$('#advice3').addClass('crystal');
+
+						x.append(h + ":" + m);
+						$('#wrongAnswer').removeClass('waitingPage');
+						setTimeout(function(){
+							alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
+							window.close();
+						},3000);
+					}
 				});
 			});
 		// END TALENT CARD
+
+		// DOBLADA O SUBTITULADA WORKFLOW
+			$('.langCards').click(function(){
+				$('#dob-sub').addClass('passedPage');
+				$('#embedVideo').removeClass('waitingPage');
+			});
+		// END DOBLADA O SUBTITULADA
+
+		// BRING GIFT CODE WORKFLOW
+			$('#bringGiftCode').click(function(){
+				$('#embedVideo').addClass('passedPage');
+				$('#giftCode').removeClass('waitingPage');
+			});
+		// END BRING GIFT CODE
 
 
 
 		// COMPETITION CARD WORKFLOW
 			$('#cardCompetencia').click(function(){
+				currentPath = "competition";
+
 				$('#firstBlankQuestion').append(questionsCompetition[0]);
 				$('#firstBlankQuestion').addClass('smallQuestion');
+
+				$('#firstYesCard').addClass('correct1');
+				$('#firstNoCard').addClass('wrong1');
 
 				$('#questions3').addClass('passedPage');
 				$('#FirstQuestion').removeClass('waitingPage');
 
-				$('#firstYesCard').addClass('correct1');
-				$('#firstNoCard').addClass('wrong1');
+
+				
+
+				
+
+				
+
+				$('.correct1').click(function(){
+					$('#FirstQuestion').addClass('passedPage');
+					$('#SecondQuestion').removeClass('waitingPage');
+
+					$('#secondBlankQuestion').append(questionsCompetition[1]);
+					$('#secondBlankQuestion').addClass('smallQuestion');
+
+					$('#secondYesCard').addClass('showPortfolioCard');
+					$('#secondNoCard').addClass('showPortfolioCard');
+
+					$('.showPortfolioCard').click(function(){
+						$('#SecondQuestion').addClass('passedPage');
+						$('#goPortfolioBlankAnswer').append(answersCompetition[1]);
+						$('#goPortfolioBlankAnswer').addClass('mediumQuestion');
+						$('#goLuckyPortfolio').removeClass('waitingPage');
+					});
+
+				});
+
+				$('.wrong1').click(function(){
+					$('#FirstQuestion').addClass('passedPage');
+					$('#goPortfolioBlankAnswer').append(answersCompetition[0]);
+					$('#goPortfolioBlankAnswer').addClass('mediumQuestion');
+					$('#goLuckyPortfolio').removeClass('waitingPage');
+				});
 			});
 		// END COMPETITION CARD
 
-
-
-		// FIRST QUESTION
-
-		$('#firstAdviceClick').click(function(){
-			$('#advice1').addClass('passedPage');
-			$('#SecondQuestion').removeClass('waitingPage');
-		});
+		// GO PORTFOLIO CARD WORKFLOW
+			$('#cardPortfolio').click(function(){
+				window.location.href = "https://instagram.com/luckyideas/";
+			});
+		// END GO PORTFOLIO CARD
 
 
 
+		// FIRST QUESTION ADVICES WORKFLOW
+
+			$('#firstAdviceClick').click(function(){
+				$('#advice1').addClass('passedPage');
+				$('#SecondQuestion').removeClass('waitingPage');
+			});
+
+			
+			$('.firstAdviceCards').click(function(event) {
+				$(this).addClass('bringToFront');
+				
+				$(this).find('.agencyData').removeClass('notHere');
+
+				$('.firstAdviceCards').addClass('adviceCardSelected');
+				$('.firstAdviceCards').addClass('noPointer');
+				$('.firstAdviceCards').find('.cardDropShadow').addClass('adviceCardDropShadowHover');
+				
+
+				$('.firstAdviceCards').find('.upMove').removeClass('goUpper');
+				$('.firstAdviceCards').find('.upMove').removeClass('upMove');
+
+				$('.firstAdviceCards').find('.hoverAppear').addClass('crystal');
+				$('.firstAdviceCards').find('.shrinkMove').addClass('crystal');
+				$('.firstAdviceCards').find('h3').addClass('crystal');
+				$('.firstAdviceCards').find('.underLine').addClass('crystal');
+
+				setTimeout(function(){
+					$('.firstAdviceCards').find('.hoverAppear').remove();
+					$('.firstAdviceCards').find('.shrinkMove').remove();
+					$('.firstAdviceCards').find('h3').remove();
+					$('.firstAdviceCards').find('.underLine').remove();
+					$('.firstAdviceCards').find('.agencyData').removeClass('crystal');
+				},600);
+
+				
+			});
+		// END FIRST QUESTION ADVICES WORKFLOW
 
 
-		// SECOND QUESTION
-		$('#secondAdviceClick').click(function(){
-			$('#advice2').addClass('passedPage');
-			$('#ThirdQuestion').removeClass('waitingPage');
-		});
+
+
+
+		// SECOND QUESTION ADVICES WORKFLOW
+			$('#secondAdviceClick').click(function(){
+				$('#advice2').addClass('passedPage');
+				$('#ThirdQuestion').removeClass('waitingPage');
+			});
+
+			$('.secondAdviceCards').click(function(event) {
+				$(this).addClass('bringToFront');
+				
+				$(this).find('.agencyData').removeClass('notHere');
+
+				$('.secondAdviceCards').addClass('adviceCardSelected');
+				$('.secondAdviceCards').addClass('noPointer');
+				$('.secondAdviceCards').find('.cardDropShadow').addClass('adviceCardDropShadowHover');
+				
+
+				$('.secondAdviceCards').find('.upMove').removeClass('goUpper');
+				$('.secondAdviceCards').find('.upMove').removeClass('upMove');
+
+				$('.secondAdviceCards').find('.hoverAppear').addClass('crystal');
+				$('.secondAdviceCards').find('.shrinkMove').addClass('crystal');
+				$('.secondAdviceCards').find('h3').addClass('crystal');
+				$('.secondAdviceCards').find('.underLine').addClass('crystal');
+
+				setTimeout(function(){
+					$('.secondAdviceCards').find('.hoverAppear').remove();
+					$('.secondAdviceCards').find('.shrinkMove').remove();
+					$('.secondAdviceCards').find('h3').remove();
+					$('.secondAdviceCards').find('.underLine').remove();
+					$('.secondAdviceCards').find('.agencyData').removeClass('crystal');
+				},600);
+
+				
+			});
+		// END SECOND QUESTION ADVICES WORKFLOW
 
 
 
 
-		// THIRD QUESTION
-		$('#thirdAdviceClick').click(function(){
-			$('#advice3').addClass('passedPage');
-			// if
-		});
+		// THIRD QUESTION ADVICES WORKFLOW
+			$('#thirdAdviceClick').click(function(){
+				$('#advice3').addClass('passedPage');
+				if (currentPath == "client"){
+					$('#flyWithUs').removeClass('waitingPage');
+
+				} else if (currentPath == "talent"){
+					$('#dob-sub').removeClass('waitingPage');
+
+				} else {
+					alert("currentPath variable is not working");
+				}
+			});
+
+			$('.thirdAdviceCards').click(function(event) {
+				$(this).addClass('bringToFront');
+				
+				$(this).find('.agencyData').removeClass('notHere');
+
+				$('.thirdAdviceCards').addClass('adviceCardSelected');
+				$('.thirdAdviceCards').addClass('noPointer');
+				$('.thirdAdviceCards').find('.cardDropShadow').addClass('adviceCardDropShadowHover');
+				
+
+				$('.thirdAdviceCards').find('.upMove').removeClass('goUpper');
+				$('.thirdAdviceCards').find('.upMove').removeClass('upMove');
+
+				$('.thirdAdviceCards').find('.hoverAppear').addClass('crystal');
+				$('.thirdAdviceCards').find('.shrinkMove').addClass('crystal');
+				$('.thirdAdviceCards').find('h3').addClass('crystal');
+				$('.thirdAdviceCards').find('.underLine').addClass('crystal');
+
+				setTimeout(function(){
+					$('.thirdAdviceCards').find('.hoverAppear').remove();
+					$('.thirdAdviceCards').find('.shrinkMove').remove();
+					$('.thirdAdviceCards').find('h3').remove();
+					$('.thirdAdviceCards').find('.underLine').remove();
+					$('.thirdAdviceCards').find('.agencyData').removeClass('crystal');
+				},600);
+
+			
+			});
+		// END THIRD QUESTION ADVICES WORKFLOW
+
+
+
 	// END WORKFLOW PAGE
 
 
@@ -614,35 +927,7 @@ jQuery(document).ready(function($) {
 			});
 		// END HOVER ANIMATION
 
-		// CLICK INTERACTION ANIMATION
-			$('.adviceCards').click(function(event) {
-				$(this).addClass('bringToFront');
-				$(this).find('.agencyData').append('<p> Esfera Comunicación <br> Luis Alberto Purata García <br> Director Asociado <br> <a href="mailto:luis.purata@esfera.cc">luis.purata@esfera.cc</a></p>');
-				$(this).find('.agencyData').removeClass('crystal');
-
-				$('.adviceCards').addClass('adviceCardSelected');
-				$('.adviceCards').addClass('noPointer');
-				$('.adviceCards').find('.cardDropShadow').addClass('adviceCardDropShadowHover');
-				$('.adviceCards').find('#agencyData').removeClass('crystal');
-
-				$('.adviceCards').find('.upMove').removeClass('goUpper');
-				$('.adviceCards').find('.upMove').removeClass('upMove');
-
-				$('.adviceCards').find('.hoverAppear').addClass('crystal');
-				$('.adviceCards').find('.shrinkMove').addClass('crystal');
-				$('.adviceCards').find('h3').addClass('crystal');
-				$('.adviceCards').find('.underLine').addClass('crystal');
-
-				setTimeout(function(){
-					$('.adviceCards').find('.hoverAppear').remove();
-					$('.adviceCards').find('.shrinkMove').remove();
-					$('.adviceCards').find('h3').remove();
-					$('.adviceCards').find('.underLine').remove();
-				},600);
-
-				
-			});
-		// END CLICK INTERACTION ANIMATION
+		
 	// END ADVICE CARDS ANIMATION
 
 	// LANGUAGE DOB/SUB CARDS ANIMATION
@@ -666,35 +951,7 @@ jQuery(document).ready(function($) {
 			});
 		// END HOVER ANIMATION
 
-		// CLICK INTERACTION ANIMATION
-			$('.adviceCards').click(function(event) {
-				$(this).addClass('bringToFront');
-				$(this).find('.agencyData').append('<p> Esfera Comunicación <br> Luis Alberto Purata García <br> Director Asociado <br> <a href="mailto:luis.purata@esfera.cc">luis.purata@esfera.cc</a></p>');
-				$(this).find('.agencyData').removeClass('crystal');
-
-				$('.adviceCards').addClass('adviceCardSelected');
-				$('.adviceCards').addClass('noPointer');
-				$('.adviceCards').find('.cardDropShadow').addClass('adviceCardDropShadowHover');
-				$('.adviceCards').find('#agencyData').removeClass('crystal');
-
-				$('.adviceCards').find('.upMove').removeClass('goUpper');
-				$('.adviceCards').find('.upMove').removeClass('upMove');
-
-				$('.adviceCards').find('.hoverAppear').addClass('crystal');
-				$('.adviceCards').find('.shrinkMove').addClass('crystal');
-				$('.adviceCards').find('h3').addClass('crystal');
-				$('.adviceCards').find('.underLine').addClass('crystal');
-
-				setTimeout(function(){
-					$('.adviceCards').find('.hoverAppear').remove();
-					$('.adviceCards').find('.shrinkMove').remove();
-					$('.adviceCards').find('h3').remove();
-					$('.adviceCards').find('.underLine').remove();
-				},600);
-
-				
-			});
-		// END CLICK INTERACTION ANIMATION
+		
 	// END LANGUAGE DOB/SUB CARDS ANIMATION
 
 	// CARDS SHADOWS
@@ -724,7 +981,7 @@ jQuery(document).ready(function($) {
 		    // var s = addZero(d.getSeconds());
 		    
 		    	// x.append(h + ":" + m + ":" + s);
-		    	x.append(h + ":" + m);
+		    	// x.append(h + ":" + m);
 	// END GET TIME
 
 	// LINKS HREF
