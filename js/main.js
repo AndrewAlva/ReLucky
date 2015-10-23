@@ -1,8 +1,6 @@
 jQuery(document).ready(function($) {
 
 
-
-
 	$('#windowWrapper').removeClass('crystal');
 
 	// RANDOM SHUFFLE FOR QUESTIONS EXPERIENCE
@@ -147,7 +145,7 @@ jQuery(document).ready(function($) {
 			// QUESTION 4
 				talentQ4 = '¿Crees que el hambre puede más que el talento?';
 				// ANSWER
-				talentA4 = 'Apreciamos el talento pero nos gusta más el hambre de ser, en Lucky más que books buscamos ganar de trascender, las siguientes agencias buscan solo talento.';
+				talentA4 = 'Apreciamos el talento pero nos gusta más el hambre de ser, en Lucky más que books buscamos ganas de trascender, las siguientes agencias buscan solo talento.';
 			// END QUESTION 4
 		// END TALENT QUESTION PACK
 
@@ -281,8 +279,6 @@ jQuery(document).ready(function($) {
 				var leftTalentAgenciesData = [agenciesData[13], agenciesData[2], agenciesData[4], agenciesData[15]];
 				var centerTalentAgenciesData = [agenciesData[4], agenciesData[1], agenciesData[5], agenciesData[2]];
 				var rightTalentAgenciesData = [agenciesData[1], agenciesData[0], agenciesData[3], agenciesData[3]];
-
-
 	// END AGENCIES PACKS
 
 
@@ -432,7 +428,7 @@ jQuery(document).ready(function($) {
 						x.append(h + ":" + m);
 						$('#wrongAnswer').removeClass('waitingPage');
 						setTimeout(function(){
-							alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
+							alert("Lo sentimos, Lucky Ideas no es la agencia para ti te recomendamos ocupar mejor tu tiempo. El sitio ha sido bloqueado.");
 							window.close();
 						},3000);
 					}
@@ -661,6 +657,11 @@ jQuery(document).ready(function($) {
 			$('#bringGiftCode').click(function(){
 				$('#embedVideo').addClass('passedPage');
 				$('#giftCode').removeClass('waitingPage');
+			});
+
+			$('#hideGiftCode').click(function(){
+				$('#embedVideo').removeClass('passedPage');
+				$('#giftCode').addClass('waitingPage');
 			});
 		// END BRING GIFT CODE
 
