@@ -427,10 +427,10 @@ jQuery(document).ready(function($) {
 
 						x.append(h + ":" + m);
 						$('#wrongAnswer').removeClass('waitingPage');
-						setTimeout(function(){
-							alert("Lo sentimos, Lucky Ideas no es la agencia para ti te recomendamos ocupar mejor tu tiempo. El sitio ha sido bloqueado.");
-							window.close();
-						},3000);
+						// setTimeout(function(){
+						// 	alert("Lo sentimos, Lucky Ideas no es la agencia para ti te recomendamos ocupar mejor tu tiempo. El sitio ha sido bloqueado.");
+						// 	window.close();
+						// },3000);
 					}
 				});
 
@@ -464,10 +464,10 @@ jQuery(document).ready(function($) {
 
 						x.append(h + ":" + m);
 						$('#wrongAnswer').removeClass('waitingPage');
-						setTimeout(function(){
-							alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
-							window.close();
-						},3000);
+						// setTimeout(function(){
+						// 	alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
+						// 	window.close();
+						// },3000);
 					}
 				});
 			});
@@ -600,10 +600,10 @@ jQuery(document).ready(function($) {
 
 						x.append(h + ":" + m);
 						$('#wrongAnswer').removeClass('waitingPage');
-						setTimeout(function(){
-							alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
-							window.close();
-						},3000);
+						// setTimeout(function(){
+						// 	alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
+						// 	window.close();
+						// },3000);
 					}
 				});
 
@@ -637,10 +637,10 @@ jQuery(document).ready(function($) {
 
 						x.append(h + ":" + m);
 						$('#wrongAnswer').removeClass('waitingPage');
-						setTimeout(function(){
-							alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
-							window.close();
-						},3000);
+						// setTimeout(function(){
+						// 	alert("Lucky Ideas sugiere que no es la agencia para ti y te recomienda ocupar mejor tu tiempo. Has sido excluido del sitio.");
+						// 	window.close();
+						// },3000);
 					}
 				});
 			});
@@ -926,9 +926,7 @@ jQuery(document).ready(function($) {
 				$(this).find('h3').removeClass('hoverTextShadow');
 				$(this).find('.underLine').removeClass('underlineHover');
 			});
-		// END HOVER ANIMATION
-
-		
+		// END HOVER ANIMATION		
 	// END ADVICE CARDS ANIMATION
 
 	// LANGUAGE DOB/SUB CARDS ANIMATION
@@ -950,9 +948,7 @@ jQuery(document).ready(function($) {
 				$(this).find('h3').removeClass('hoverTextShadow');
 				$(this).find('.underLine').removeClass('underlineHover');
 			});
-		// END HOVER ANIMATION
-
-		
+		// END HOVER ANIMATION	
 	// END LANGUAGE DOB/SUB CARDS ANIMATION
 
 	// CARDS SHADOWS
