@@ -1692,10 +1692,34 @@ body{
             .questionTitle{
                 width: 500px;
                 height: 104px;
+                top: 30px;
+            }
+
+            .questions2 .questionTitle{
+                width: 500px;
+                height: 104px;
+            }
+
+            .advicePages .questionTitle{
+                width: 500px !important;
+                height: 142px !important;
+                background-image: url('../img/cards/cloud-tblt.svg');
+                
+            }
+
+            .questions2 .questionTitle h2{
+                padding: 0 80px;
+                font-size: 18px;
+                line-height: 24px;
             }
 
             .questionTitle h2{
                 font-size: 26px;
+            }
+
+            .advicePages h2{
+                font-size: 18px !important;
+                line-height: 24px !important;
             }
 
             .mediumQuestion{
@@ -1703,9 +1727,19 @@ body{
             }
 
 
+
+
             .cardsWrapper{
                 top: 10%;
                 height: 600px;
+            }
+
+            .advicePages .cardsWrapper{
+                top: 5%;
+            }
+
+            .compactCardsWrapper{
+                height: 0 !important;
             }
 
             .thirdCards{
@@ -1713,26 +1747,84 @@ body{
             }
 
             .leftThirdCard{
-                left: -50%;
+                left: -52%;
                 right: 0;
             }
 
             .centerThirdCard{
-                left: 50%;
+                left: 52%;
             }
             .centerCard{
                 top: 60%;
             }
 
             .rightThirdCard{
-                left: -50%;
+                left: -52%;
             }
             .rightCard{
                 bottom: -60%;
             }
 
+            .secondCards:nth-child(2){
+                bottom: -50%;
+            }
+
+            .adviceCards:first-child{
+                bottom: -10px;
+            }
+
+            .adviceCards:nth-child(2){
+                left: 53%;
+                top: 50%;
+            }
+
+            .adviceCards:nth-child(3){
+                left: -53%;
+                bottom: -110%;
+            }
+
+            .adviceCardSelected{
+                top: 70% !important;
+            }
+
+
+
+
+
             .cardName{
                 top: 250px;
+            }
+
+            .continueFooter{
+                left: 45%;
+            }
+
+
+
+
+
+            .clientQ0{
+                margin: 20px 0;
+            }
+
+            .clientQ1{
+                margin: 30px 0;
+            }
+
+            .clientA1{
+                margin: 25px 0;
+            }
+
+            .clientQ2{
+                margin: 25px 0;
+            }
+
+            .clientA2{
+                margin: 15px 0;
+            }
+
+            .clientQ3{
+                margin: 25px 0;
             }
         }
         /*///// END PORTRAIT SPECIAL TABLET STYLING /////*/
