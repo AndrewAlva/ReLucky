@@ -1697,7 +1697,9 @@ body{
 
             .questions2 .questionTitle{
                 width: 500px;
-                height: 104px;
+                height: 141px;
+                background-image: url(../img/cards/cloud-tblt.svg);
+                
             }
 
             .advicePages .questionTitle{
@@ -1718,8 +1720,14 @@ body{
             }
 
             .advicePages h2{
-                font-size: 18px !important;
-                line-height: 24px !important;
+                font-size: 16px !important;
+                line-height: 18px !important;
+                padding: 0 90px;
+            }
+
+            #wrongAnswer h2{
+                font-size: 20px !important;
+                line-height: 22px;
             }
 
             .mediumQuestion{
@@ -1744,6 +1752,21 @@ body{
 
             .thirdCards{
                 width: 210px;
+                height: 302px;
+            }
+
+            .secondCards{
+                height: 330px;
+            }
+
+            .secondCards:first-child{
+                bottom: 300px;
+                right: 50%;
+            }
+
+            .secondCards:last-child{
+                bottom: 0;
+                left: 50%;
             }
 
             .leftThirdCard{
@@ -1765,10 +1788,6 @@ body{
                 bottom: -60%;
             }
 
-            .secondCards:nth-child(2){
-                bottom: -50%;
-            }
-
             .adviceCards:first-child{
                 bottom: -10px;
             }
@@ -1785,6 +1804,11 @@ body{
 
             .adviceCardSelected{
                 top: 70% !important;
+            }
+
+            .uniqueCard{
+                width: 220px;
+                height: 312px;
             }
 
 
@@ -1804,27 +1828,41 @@ body{
 
 
             .clientQ0{
-                margin: 20px 0;
+                margin: 35px 0;
             }
+            .clientA0{
+                margin: 35px 0;
+            }
+
 
             .clientQ1{
-                margin: 30px 0;
+                margin: 45px 0;
             }
-
             .clientA1{
                 margin: 25px 0;
             }
 
+
             .clientQ2{
-                margin: 25px 0;
+                margin: 45px 0;
+            }
+            .clientA2{
+                margin: 35px 0;
+            }
+            .clientC2{
+                left: 30%;
             }
 
-            .clientA2{
-                margin: 15px 0;
-            }
 
             .clientQ3{
-                margin: 25px 0;
+                margin: 45px 0;
+            }
+            .clientA3{}
+
+
+            .clientQ4{/*done*/}
+            .clientA4{
+                margin: 30px 0;
             }
         }
         /*///// END PORTRAIT SPECIAL TABLET STYLING /////*/
