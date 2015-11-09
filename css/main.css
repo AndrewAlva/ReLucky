@@ -1747,7 +1747,7 @@ body{
             }
 
             .compactCardsWrapper{
-                height: 0 !important;
+                height: 300px !important;
             }
 
             .thirdCards{
@@ -1772,20 +1772,21 @@ body{
             .leftThirdCard{
                 left: -52%;
                 right: 0;
+                bottom: 320px;
             }
 
             .centerThirdCard{
                 left: 52%;
             }
             .centerCard{
-                top: 60%;
+                top: 0%;
             }
 
             .rightThirdCard{
                 left: -52%;
             }
             .rightCard{
-                bottom: -60%;
+                bottom: 0%;
             }
 
             .adviceCards:first-child{
@@ -1833,6 +1834,7 @@ body{
             .clientA0{
                 margin: 35px 0;
             }
+            .clientC0{/*done*/}
 
 
             .clientQ1{
@@ -1841,6 +1843,7 @@ body{
             .clientA1{
                 margin: 25px 0;
             }
+            .clientC1{/*done*/}
 
 
             .clientQ2{
@@ -1857,13 +1860,38 @@ body{
             .clientQ3{
                 margin: 45px 0;
             }
-            .clientA3{}
+            .clientA3{
+                margin: 30px 0;
+            }
+            .clientC3{
+                width: 200px;
+                bottom: 70px;
+            }
 
 
             .clientQ4{/*done*/}
             .clientA4{
                 margin: 30px 0;
             }
+            .clientC4{/*done*/}
+
+
+
+            .talentQ0{}
+            .talentA0{}
+            
+            .talentQ1{}
+            .talentA1{}
+
+            .talentQ2{}
+            .talentA2{}
+
+            .talentQ3{}
+            .talentA3{}
+
+            .talentC{}
+
+            
         }
         /*///// END PORTRAIT SPECIAL TABLET STYLING /////*/
 
