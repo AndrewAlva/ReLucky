@@ -319,6 +319,51 @@ body{
 
 
 
+/*////////////////////////////// INIT UI OBJECTS //////////////////////////////*/
+    #goBack{
+        position: absolute;
+        width: 100px;
+        height: 60px;
+        left: 30px;
+        bottom: 30px;
+        color: #ecf1f9;
+        z-index: 1000000000;
+        cursor: pointer;
+        -webkit-transition: all .6s ease-in-out;
+           -moz-transition: all .6s ease-in-out;
+            -ms-transition: all .6s ease-in-out;
+             -o-transition: all .6s ease-in-out;
+                transition: all .6s ease-in-out;
+    }
+
+    .hideBack{
+        bottom: 120% !important;
+    }
+
+    #goBack:hover{
+        color: #e8545e;
+    }
+
+    #goBack p{
+        font-size: 24px;
+        margin: 0 0;
+        text-align: center;
+    }
+
+    #goBack img{
+        position: absolute;
+        width: 30px;
+        margin: auto;
+        bottom: 0;
+        left: 0; right: 0;
+        -webkit-transform: rotate(-90deg);
+           -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+             -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+    }
+/*////////////////////////////// END UI OBJECTS  //////////////////////////////*/
+
 
 /*////////////////////////////// QUESTIONS STYLING //////////////////////////////*/
     .questionTitle{
@@ -1397,15 +1442,35 @@ body{
 
     /*//////// ADVICE CARDS INTERACTION ////////////*/
         .adviceCardSelected{
-            left: 0 !important;
+            /*left: 0 !important;
             right: 0 !important;
             top: 0 !important;
-            bottom: 0 !important;
+            bottom: 0 !important;*/
             -webkit-transform: rotate(90deg) !important;
                -moz-transform: rotate(90deg) !important;
                 -ms-transform: rotate(90deg) !important;
                  -o-transform: rotate(90deg) !important;
                     transform: rotate(90deg) !important;
+        }
+
+        /*.adviceCardSelected:hover{
+            -webkit-transform: rotate(90deg) translate(-10px,0) !important;
+               -moz-transform: rotate(90deg) translate(-10px,0) !important;
+                -ms-transform: rotate(90deg) translate(-10px,0) !important;
+                 -o-transform: rotate(90deg) translate(-10px,0) !important;
+                    transform: rotate(90deg) translate(-10px,0) !important;
+        }*/
+
+        .adviceCardSelected:first-child{
+            right: 65%;
+        }
+
+        .adviceCardSelected:last-child{
+            left: 65%;
+        }
+
+        .openedCards{
+            width: 100% !important;
         }
 
         .adviceCardDropShadowHover{

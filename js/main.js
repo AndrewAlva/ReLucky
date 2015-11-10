@@ -111,7 +111,7 @@ jQuery(document).ready(function($) {
 			// QUESTION 5
 				clientQ5 = '¿Buscas agencias multigalardonadas y con larga trayectoria?';
 				// ANSWER
-				clientA5 = 'Aquí si tenemos que ser sinceros, nosotros no tenemos ningún premio en nuestra pared, sin embargo ninguna de estas grandes agencia nació con premios.';
+				clientA5 = 'Aquí si tenemos que ser sinceros, nosotros no tenemos ningún premio en nuestra pared, sin embargo ninguna de estas grandes agencias nació con premios.';
 				// CONTINUE COPY
 				clientC5 = 'Sé nuestro primer premio.';
 			// END QUESTION 5
@@ -290,10 +290,34 @@ jQuery(document).ready(function($) {
 
 			
 	// WORKFLOW PAGE
+
+		// GO BACK STATUS
+			// Go Back 0 = LANDING PAGE
+			// Go Back 1 = ¿QUIÉN ERES? PAGE
+
+			// Go Back 2 = FIRST QUESTION PAGE
+			// Go Back 2.5 = FIRST ADVICE PAGE
+
+			// Go Back 3 = SECOND QUESTION PAGE
+			// Go Back 3.5 = SECOND ADVICE PAGE
+
+			// Go Back 4 = THIRD QUESTION PAGE
+			// Go Back 4.5 = THIRD ADVICE PAGE
+
+			// Go Back 5 = FINAL QUESTION PAGE
+			// Go Back 6 = FINAL SCREEN PAGE
+
+		var goBack = 0;
+		var firstAgenciesNameGone = false;
+
 		$('#startWeb').click(function(){
+			goBack =  1;
+
 			$('#welcomePage').addClass('crystal');
 			$('#welcomePage').addClass('passedPage');
 			$('#questions3').removeClass('waitingPage');
+
+			$('#goBack').removeClass('hideBack');
 
 			setTimeout(function(){
 				$('#questions3').find('.cardsWrapper').removeClass('compactCardsWrapper');
@@ -304,13 +328,254 @@ jQuery(document).ready(function($) {
 			},1000);
 		});
 
+		$('#goBack').click(function() {
+			if (goBack == 1){
+				goBack = 0;
+				$('#welcomePage').removeClass('crystal');
+				$('#welcomePage').removeClass('passedPage');
+				$('#questions3').addClass('waitingPage');
+				$('#goBack').addClass('hideBack');
+
+			} else if ( goBack == 2){
+				goBack = 1;
+				$('#questions3').removeClass('passedPage');
+				$('#FirstQuestion').addClass('waitingPage');
+				$('#FirstQuestion').removeClass('passedPage');
+				$('#advice1').addClass('waitingPage');
+
+				$('#firstYesCard').removeClass('wrong1');
+				$('#firstYesCard').removeClass('correct1');
+				$('#firstNoCard').removeClass('wrong1');
+				$('#firstNoCard').removeClass('correct1');
+
+				// REMOVE INSERTS ON EACH QUESTION AND ADVICE (CLIENT)
+					$('#firstBlankQuestion').empty(questionsClient[selectedClientQA1]);
+					$('#firstBlankQuestion').removeClass('clientQ' + selectedClientQA1);
+
+					$('#firstBlankAnswer').empty(answersClient[selectedClientQA1]);
+					$('#firstBlankAnswer').removeClass('clientA' + selectedClientQA1);
+
+					$('#firstBlankCopy').empty(copiesClient[selectedClientQA1]);
+					$('#firstAdviceClick').removeClass('clientC' + selectedClientQA1);
+
+					$('#firstInsertAgencyName1').empty(leftClientAgenciesNames[selectedClientQA1]);
+					$('#firstInsertAgencyName2').empty(centerClientAgenciesNames[selectedClientQA1]);
+					$('#firstInsertAgencyName3').empty(rightClientAgenciesNames[selectedClientQA1]);
+
+					$('#firstInsertAgencyData1').empty(leftClientAgenciesData[selectedClientQA1]);
+					$('#firstInsertAgencyData2').empty(centerClientAgenciesData[selectedClientQA1]);
+					$('#firstInsertAgencyData3').empty(rightClientAgenciesData[selectedClientQA1]);
+
+
+
+
+					$('#secondBlankQuestion').empty(questionsClient[selectedClientQA2]);
+					$('#secondBlankQuestion').removeClass('clientQ' + selectedClientQA2);
+
+					$('#secondBlankAnswer').empty(answersClient[selectedClientQA2]);
+					$('#secondBlankAnswer').removeClass('clientA' + selectedClientQA2);
+
+					$('#secondBlankCopy').empty(copiesClient[selectedClientQA2]);
+					$('#secondAdviceClick').removeClass('clientC' + selectedClientQA2);
+
+					$('#secondInsertAgencyName1').empty(leftClientAgenciesNames[selectedClientQA2]);
+					$('#secondInsertAgencyName2').empty(centerClientAgenciesNames[selectedClientQA2]);
+					$('#secondInsertAgencyName3').empty(rightClientAgenciesNames[selectedClientQA2]);
+
+					$('#secondInsertAgencyData1').empty(leftClientAgenciesData[selectedClientQA2]);
+					$('#secondInsertAgencyData2').empty(centerClientAgenciesData[selectedClientQA2]);
+					$('#secondInsertAgencyData3').empty(rightClientAgenciesData[selectedClientQA2]);
+
+
+
+
+					$('#thirdBlankQuestion').empty(questionsClient[selectedClientQA3]);
+					$('#thirdBlankQuestion').removeClass('clientQ' + selectedClientQA3);
+
+					$('#thirdBlankAnswer').empty(answersClient[selectedClientQA3]);
+					$('#thirdBlankAnswer').removeClass('clientA' + selectedClientQA3);
+
+					$('#thirdBlankCopy').empty(copiesClient[selectedClientQA3]);
+					$('#thirdAdviceClick').removeClass('clientC' + selectedClientQA3);
+
+					$('#thirdInsertAgencyName1').empty(leftClientAgenciesNames[selectedClientQA3]);
+					$('#thirdInsertAgencyName2').empty(centerClientAgenciesNames[selectedClientQA3]);
+					$('#thirdInsertAgencyName3').empty(rightClientAgenciesNames[selectedClientQA3]);
+
+					$('#thirdInsertAgencyData1').empty(leftClientAgenciesData[selectedClientQA3]);
+					$('#thirdInsertAgencyData2').empty(centerClientAgenciesData[selectedClientQA3]);
+					$('#thirdInsertAgencyData3').empty(rightClientAgenciesData[selectedClientQA3]);
+				// REMOVE INSERTS ON EACH QUESTION AND ADVICE (CLIENT)
+
+
+				// REMOVE INSERTS ON EACH QUESTION AND ADVICE (TALENT)
+					$('#firstBlankQuestion').empty("Así que ¿Quieres trabajar con nosotros? <br>");
+					$('#firstBlankQuestion').empty(questionsTalent[selectedTalentQA1]);
+					$('#firstBlankQuestion').removeClass('talentQ' + selectedTalentQA1);
+					$('#firstBlankQuestion').removeClass('firstTalentQuestion');
+
+					$('#firstBlankAnswer').empty(answersTalent[selectedTalentQA1]);
+					$('#firstBlankAnswer').removeClass('talentA' + selectedTalentQA1);
+
+					$('#firstInsertAgencyName1').empty(leftTalentAgenciesNames[selectedTalentQA1]);
+					$('#firstInsertAgencyName2').empty(centerTalentAgenciesNames[selectedTalentQA1]);
+					$('#firstInsertAgencyName3').empty(rightTalentAgenciesNames[selectedTalentQA1]);
+
+					$('#firstInsertAgencyData1').empty(leftTalentAgenciesData[selectedTalentQA1]);
+					$('#firstInsertAgencyData2').empty(centerTalentAgenciesData[selectedTalentQA1]);
+					$('#firstInsertAgencyData3').empty(rightTalentAgenciesData[selectedTalentQA1]);
+
+
+
+					$('#secondBlankQuestion').empty(questionsTalent[selectedTalentQA2]);
+					$('#secondBlankQuestion').removeClass('talentQ' + selectedTalentQA2);
+
+					$('#secondBlankAnswer').empty(answersTalent[selectedTalentQA2]);
+					$('#secondBlankAnswer').removeClass('talentA' + selectedTalentQA2);
+
+					$('#secondInsertAgencyName1').empty(leftTalentAgenciesNames[selectedTalentQA2]);
+					$('#secondInsertAgencyName2').empty(centerTalentAgenciesNames[selectedTalentQA2]);
+					$('#secondInsertAgencyName3').empty(rightTalentAgenciesNames[selectedTalentQA2]);
+
+					$('#secondInsertAgencyData1').empty(leftTalentAgenciesData[selectedTalentQA2]);
+					$('#secondInsertAgencyData2').empty(centerTalentAgenciesData[selectedTalentQA2]);
+					$('#secondInsertAgencyData3').empty(rightTalentAgenciesData[selectedTalentQA2]);
+
+
+
+					$('#thirdBlankQuestion').empty(questionsTalent[selectedTalentQA3]);
+					$('#thirdBlankQuestion').removeClass('talentQ' + selectedTalentQA3);
+
+					$('#thirdBlankAnswer').empty(answersTalent[selectedTalentQA3]);
+					$('#thirdBlankAnswer').removeClass('talentA' + selectedTalentQA3);
+
+					$('#thirdInsertAgencyName1').empty(leftTalentAgenciesNames[selectedTalentQA3]);
+					$('#thirdInsertAgencyName2').empty(centerTalentAgenciesNames[selectedTalentQA3]);
+					$('#thirdInsertAgencyName3').empty(rightTalentAgenciesNames[selectedTalentQA3]);
+
+					$('#thirdInsertAgencyData1').empty(leftTalentAgenciesData[selectedTalentQA3]);
+					$('#thirdInsertAgencyData2').empty(centerTalentAgenciesData[selectedTalentQA3]);
+					$('#thirdInsertAgencyData3').empty(rightTalentAgenciesData[selectedTalentQA3]);
+
+
+
+
+					$('#firstAdviceClick').removeClass('talentC');
+					$('#firstBlankCopy').empty(copyTalent);
+					$('#secondAdviceClick').removeClass('talentC');
+					$('#secondBlankCopy').empty(copyTalent);
+					$('#thirdAdviceClick').removeClass('talentC');
+					$('#thirdBlankCopy').empty(copyTalent);
+				// REMOVE INSERTS ON EACH QUESTION AND ADVICE (TALENT)
+
+
+				// REMOVE INSERTS ON EACH QUESTION AND ADVICE (COMPETITION)
+					$('#firstBlankQuestion').empty(questionsCompetition[0]);
+					$('#firstBlankQuestion').removeClass('smallQuestion');
+
+					$('#firstYesCard').removeClass('correct1');
+					$('#firstNoCard').removeClass('wrong1');
+				// REMOVE INSERTS ON EACH QUESTION AND ADVICE (COMPETITION)
+
+				// RESET OTHER CLASSES AND INSERTS (SELECTED AGENCIES)
+
+				// RESET OTHER CLASSES AND INSERTS (SELECTED AGENCIES)
+
+			} else if ( goBack == 2.5){
+				goBack = 2;
+				$('#advice1').addClass('waitingPage');
+				$('#FirstQuestion').removeClass('passedPage');
+
+				// RESET FIRST ADVICE CARDS
+					$('#advice1').find('.cardsWrapper').removeClass('openedCards');
+					
+					$('.firstAdviceCards').removeClass('adviceCardSelected');
+					$('.firstAdviceCards').removeClass('noPointer');
+					$('.firstAdviceCards').find('.cardDropShadow').removeClass('adviceCardDropShadowHover');
+					
+
+					$('.firstAdviceCards').find('.upMoveID').addClass('goUpper');
+					$('.firstAdviceCards').find('.upMoveID').addClass('upMove');
+
+					$('.firstAdviceCards').find('.hoverAppear').removeClass('crystal');
+					$('.firstAdviceCards').find('.shrinkMove').removeClass('crystal');
+					$('.firstAdviceCards').find('h3').removeClass('crystal');
+					$('.firstAdviceCards').find('.underLine').removeClass('crystal');
+
+					$('.firstAdviceCards').find('.cardIcon').append('<img class="hoverAppear" src="img/cards/card-bg-hover.png" alt="Yes"> <div class="cardShadow"> <img class="shrinkMove" src="img/cards/agency-shadow.svg" alt="Shadow Agency Lucky"> <img class="hoverAppear shrinkMove" src="img/cards/agency-shadow-hover.svg" alt="Shadow Agency Lucky"> </div>');
+					$('.firstAdviceCards').find('.agencyData').addClass('crystal');
+				// RESET FIRST ADVICE CARDS
+
+				if (firstAgenciesNameGone == true){
+					// RE-INSERT AGENCIES NAME ON FIRST ADVICE
+						setTimeout(function(){
+							$('.firstAdviceCards').find('.agencyData').addClass('notHere');
+
+							$('#firstInsertAgencyName1').append(leftClientAgenciesNames[selectedClientQA1]);
+							$('#firstInsertAgencyName2').append(centerClientAgenciesNames[selectedClientQA1]);
+							$('#firstInsertAgencyName3').append(rightClientAgenciesNames[selectedClientQA1]);
+						},800);
+					// RE-INSERT AGENCIES NAME ON FIRST ADVICE
+				}
+
+			} else if ( goBack == 3){
+				goBack = 2;
+				$('#advice1').addClass('waitingPage');
+				$('#advice1').removeClass('passedPage');
+				$('#FirstQuestion').removeClass('passedPage');
+				$('#SecondQuestion').addClass('waitingPage');
+
+				// RESET FIRST ADVICE CARDS
+					$('#advice1').find('.cardsWrapper').removeClass('openedCards');
+					
+					$('.firstAdviceCards').find('.agencyData').addClass('notHere');
+
+					$('.firstAdviceCards').removeClass('adviceCardSelected');
+					$('.firstAdviceCards').removeClass('noPointer');
+					$('.firstAdviceCards').find('.cardDropShadow').removeClass('adviceCardDropShadowHover');
+					
+
+					$('.firstAdviceCards').find('.upMoveID').addClass('goUpper');
+					$('.firstAdviceCards').find('.upMoveID').addClass('upMove');
+
+					$('.firstAdviceCards').find('.hoverAppear').removeClass('crystal');
+					$('.firstAdviceCards').find('.shrinkMove').removeClass('crystal');
+					$('.firstAdviceCards').find('h3').removeClass('crystal');
+					$('.firstAdviceCards').find('.underLine').removeClass('crystal');
+
+					$('.firstAdviceCards').find('.cardIcon').append('<img class="hoverAppear" src="img/cards/card-bg-hover.png" alt="Yes"> <div class="cardShadow"> <img class="shrinkMove" src="img/cards/agency-shadow.svg" alt="Shadow Agency Lucky"> <img class="hoverAppear shrinkMove" src="img/cards/agency-shadow-hover.svg" alt="Shadow Agency Lucky"> </div>');
+					$('.firstAdviceCards').find('.agencyData').addClass('crystal');
+				// RESET FIRST ADVICE CARDS
+
+				// RE-INSERT AGENCIES NAME ON FIRST ADVICE
+					
+					$('#firstInsertAgencyName1').append(leftClientAgenciesNames[selectedClientQA1]);
+					$('#firstInsertAgencyName2').append(centerClientAgenciesNames[selectedClientQA1]);
+					$('#firstInsertAgencyName3').append(rightClientAgenciesNames[selectedClientQA1]);
+				// RE-INSERT AGENCIES NAME ON FIRST ADVICE
+
+			} else if ( goBack == 3.5){
+				goBack = 3;
+			} else if ( goBack == 4)  {
+				goBack = 3;
+			} else if ( goBack == 4.5){
+				goBack = 4;
+			} else if ( goBack == 5)  {
+				goBack = 4;
+			} else if ( goBack == 6)  {
+				goBack = 5;
+			}
+
+		});
+
 		//////////////////////////////// INTRO QUESTIONS ////////////////////////////////
 
 		var currentPath;
-		var youLose = false; 
+////////// var youLose = false; 
 		// CLIENT CARD WORKFLOW
 			$('#cardCliente').click(function(){
 				currentPath = "client";
+				goBack = 2;
 
 				$('#firstBlankQuestion').append(questionsClient[selectedClientQA1]);
 				$('#firstBlankQuestion').addClass('clientQ' + selectedClientQA1);
@@ -385,10 +650,15 @@ jQuery(document).ready(function($) {
 				}
 
 				$('.correct1').click(function(){
+					goBack = 3;
+
 					$('#FirstQuestion').addClass('passedPage');
 					$('#SecondQuestion').removeClass('waitingPage');
+
 				});
 				$('.wrong1').click(function(){
+					goBack = 2.5;
+
 					$('#FirstQuestion').addClass('passedPage');
 					$('#advice1').removeClass('waitingPage');
 
@@ -409,10 +679,14 @@ jQuery(document).ready(function($) {
 				}
 
 				$('.correct2').click(function(){
+					goBack = 4;
+
 					$('#SecondQuestion').addClass('passedPage');
 					$('#ThirdQuestion').removeClass('waitingPage');
 				});
 				$('.wrong2').click(function(){
+					goBack = 3.5;
+
 					$('#SecondQuestion').addClass('passedPage');
 					$('#advice2').removeClass('waitingPage');
 
@@ -446,10 +720,14 @@ jQuery(document).ready(function($) {
 				}
 
 				$('.correct3').click(function(){
+					goBack = 5;
+
 					$('#ThirdQuestion').addClass('passedPage');
 					$('#flyWithUs').removeClass('waitingPage');
 				});
 				$('.wrong3').click(function(){
+					goBack = 4.5;
+
 					$('#ThirdQuestion').addClass('passedPage');
 					$('#advice3').removeClass('waitingPage');
 
@@ -470,11 +748,14 @@ jQuery(document).ready(function($) {
 						// },3000);
 					}
 				});
+
 			});
 		// END CLIENT CARD
 
 		// WANT TO FLY WITH US WORKFLOW
 			$('#cardFly').click(function(){
+				goBack = 6;
+				
 				$('#flyWithUs').addClass('passedPage');
 				$('#embedStreaming').removeClass('waitingPage');
 			});
@@ -485,6 +766,7 @@ jQuery(document).ready(function($) {
 		// TALENT CARD WORKFLOW
 			$('#cardTalento').click(function(){
 				currentPath = "talent";
+				goBack = 2;
 
 				$('#firstBlankQuestion').append("Así que ¿Quieres trabajar con nosotros? <br>");
 				$('#firstBlankQuestion').append(questionsTalent[selectedTalentQA1]);
@@ -643,11 +925,14 @@ jQuery(document).ready(function($) {
 						// },3000);
 					}
 				});
+				
 			});
 		// END TALENT CARD
 
 		// DOBLADA O SUBTITULADA WORKFLOW
 			$('.langCards').click(function(){
+				goBack = 6;
+
 				$('#dob-sub').addClass('passedPage');
 				$('#embedVideo').removeClass('waitingPage');
 			});
@@ -670,6 +955,7 @@ jQuery(document).ready(function($) {
 		// COMPETITION CARD WORKFLOW
 			$('#cardCompetencia').click(function(){
 				currentPath = "competition";
+				goBack = 2;
 
 				$('#firstBlankQuestion').append(questionsCompetition[0]);
 				$('#firstBlankQuestion').addClass('smallQuestion');
@@ -712,6 +998,7 @@ jQuery(document).ready(function($) {
 					$('#goPortfolioBlankAnswer').addClass('mediumQuestion');
 					$('#goLuckyPortfolio').removeClass('waitingPage');
 				});
+				
 			});
 		// END COMPETITION CARD
 
@@ -726,15 +1013,22 @@ jQuery(document).ready(function($) {
 		// FIRST QUESTION ADVICES WORKFLOW
 
 			$('#firstAdviceClick').click(function(){
+				goBack = 3;
+				// console.log('goBack= ' + goBack);
+
 				$('#advice1').addClass('passedPage');
 				$('#SecondQuestion').removeClass('waitingPage');
+				
 			});
 
 			
 			$('.firstAdviceCards').click(function(event) {
-				$(this).addClass('bringToFront');
+				// $(this).addClass('bringToFront');
+				firstAgenciesNameGone = true;
+
+				$('#advice1').find('.cardsWrapper').addClass('openedCards');
 				
-				$(this).find('.agencyData').removeClass('notHere');
+				$('.firstAdviceCards').find('.agencyData').removeClass('notHere');
 
 				$('.firstAdviceCards').addClass('adviceCardSelected');
 				$('.firstAdviceCards').addClass('noPointer');
@@ -767,14 +1061,19 @@ jQuery(document).ready(function($) {
 
 		// SECOND QUESTION ADVICES WORKFLOW
 			$('#secondAdviceClick').click(function(){
+				goBack = 4;
+				// console.log('goBack= ' + goBack);
+
 				$('#advice2').addClass('passedPage');
 				$('#ThirdQuestion').removeClass('waitingPage');
 			});
 
 			$('.secondAdviceCards').click(function(event) {
-				$(this).addClass('bringToFront');
+				// $(this).addClass('bringToFront');
+
+				$('#advice2').find('.cardsWrapper').addClass('openedCards');
 				
-				$(this).find('.agencyData').removeClass('notHere');
+				$('.secondAdviceCards').find('.agencyData').removeClass('notHere');
 
 				$('.secondAdviceCards').addClass('adviceCardSelected');
 				$('.secondAdviceCards').addClass('noPointer');
@@ -806,6 +1105,9 @@ jQuery(document).ready(function($) {
 
 		// THIRD QUESTION ADVICES WORKFLOW
 			$('#thirdAdviceClick').click(function(){
+				goBack = 5;
+				// console.log('goBack= ' + goBack);
+
 				$('#advice3').addClass('passedPage');
 				if (currentPath == "client"){
 					$('#flyWithUs').removeClass('waitingPage');
@@ -819,9 +1121,11 @@ jQuery(document).ready(function($) {
 			});
 
 			$('.thirdAdviceCards').click(function(event) {
-				$(this).addClass('bringToFront');
+				// $(this).addClass('bringToFront');
+
+				$('#advice3').find('.cardsWrapper').addClass('openedCards');
 				
-				$(this).find('.agencyData').removeClass('notHere');
+				$('.thirdAdviceCards').find('.agencyData').removeClass('notHere');
 
 				$('.thirdAdviceCards').addClass('adviceCardSelected');
 				$('.thirdAdviceCards').addClass('noPointer');
@@ -1001,4 +1305,8 @@ jQuery(document).ready(function($) {
 			// END BG ANIMATION
 		});
 	// END LINKS HREF
+
+	setInterval(function(){
+		console.log("Current goBack status: " + goBack);
+	},2000);
 });
